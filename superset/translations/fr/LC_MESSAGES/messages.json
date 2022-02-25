@@ -738,9 +738,6 @@
         "Une base de données avec le même nom existe déjà."
       ],
       "Field is required": ["Le champ est requis"],
-      "Field cannot be decoded by JSON.  %{json_error}s": [
-        "Le champ ne peut pas être décodé par JSON  %{json_error}s"
-      ],
       "The metadata_params in Extra field is not configured correctly. The key %{key}s is invalid.": [
         "Le paramètre metadata_params dans Champ supplémentaire n'est pas correctement configuré. La clé %(key)s est invalide."
       ],
@@ -960,9 +957,6 @@
       "Databases": ["Bases de données"],
       "Data": ["Données"],
       "Datasets": ["Jeux de données"],
-      "Upload a CSV": ["Téléverser un fichier CSV"],
-      "Upload a Columnar File": ["Téléverser un fichier en colonnes"],
-      "Upload Excel": ["Téléverser un fichier Excel"],
       "Action Log": ["Journaux d'actions"],
       "Dashboard Emails": ["Tableau de bord Emails"],
       "Chart Email Schedules": ["Graphique Email Schedules"],
@@ -1165,9 +1159,6 @@
       ],
       "Request Permissions": ["Besoin de permissions"],
       "Cancel": ["Annuler"],
-      "Use the edit buttom to change this field": [
-        "Utilisez le bouton Editer pour changer ce champ"
-      ],
       "Test Connection": ["Test de connexion"],
       "[Superset] Access to the datasource %(name)s was granted": [
         "[Superset] Accès à la source de données %(name)s accordé"
@@ -1178,6 +1169,55 @@
       "Invalid metric object": ["Object métrique invalide"],
       "Unable to find such a holiday: [%(holiday)s]": [
         "Impossible de trouver un tel congé : [%(holiday)s]"
+      ],
+      "percentiles must be a list or tuple with two numeric values, of which the first is lower than the second value": [
+        "percentiles doit être une liste ou un couple de 2 valeurs dont le premier est inférieur au second"
+      ],
+      "`compare_columns` must have the same length as `source_columns`.": [
+        "`compare_columns` doit être de même longueur que `source_columns`."
+      ],
+      "`compare_type` must be `difference`, `percentage` or `ratio`": [
+        "`compare_type` doit être `difference`, `percentage` or `ratio`"
+      ],
+      "Column \"%(column)s\" is not numeric or does not exists in the query results.": [
+        "La colonne \"%(column)s\" n'est pas numérique ou n'existe pas dans les résultats de requêtes."
+      ],
+      "`rename_columns` must have the same length as `columns`.": [
+        "`rename_columns` doit être de même longueur que `columns`."
+      ],
+      "Invalid cumulative operator: %(operator)s": [
+        "Operateur cumulatif invalide: %(operator)s"
+      ],
+      "Invalid geohash string": ["Chaine de geohash invalide"],
+      "Invalid longitude/latitude": ["Invalide Longitude/Latitude"],
+      "Invalid geodetic string": ["Chaine de géodésie invalide"],
+      "Pivot operation requires at least one index": [
+        "L'opération de pivot nécessite au moins un index"
+      ],
+      "Pivot operation must include at least one aggregate": [
+        "L'opération de pivot nécessite au moins un agrégat"
+      ],
+      "`prophet` package not installed": ["`prophet` package non installé"],
+      "Time grain missing": ["Granularité de temps manquante"],
+      "Unsupported time grain: %(time_grain)s": [
+        "Granularité de Temps non supportée : %(time_grain)s"
+      ],
+      "Confidence interval must be between 0 and 1 (exclusive)": [
+        "L'intervalle de confiance doit être entre 0 et 1 (exclusif)"
+      ],
+      "DataFrame must include temporal column": [
+        "Dataframe doit inclure une colonne temporelle"
+      ],
+      "DataFrame include at least one series": [
+        "DataFrame doit comprendre au moins une série"
+      ],
+      "Undefined window for rolling operation": [
+        "Fenêtre indéfinie pour l'opération de roulement"
+      ],
+      "Window must be > 0": ["La fenêtre doit être > 0"],
+      "Invalid rolling_type: %(type)s": ["Le rolling_type invalide: %(type)s"],
+      "Invalid options for %(rolling_type)s: %(options)s": [
+        "Options invalides pour %(rolling_type)s: %(options)s"
       ],
       "Referenced columns not available in DataFrame.": [
         "Les colonnes référencées sont indisponibles dans la DataFrame."
@@ -1190,58 +1230,6 @@
       ],
       "Invalid numpy function: %(operator)s": [
         "Fonction numpy invalide: %(operator)s"
-      ],
-      "Pivot operation requires at least one index": [
-        "L'opération de pivot nécessite au moins un index"
-      ],
-      "Pivot operation must include at least one aggregate": [
-        "L'opération de pivot nécessite au moins un agrégat"
-      ],
-      "Undefined window for rolling operation": [
-        "Fenêtre indéfinie pour l'opération de roulement"
-      ],
-      "Window must be > 0": ["La fenêtre doit être > 0"],
-      "Invalid rolling_type: %(type)s": ["Le rolling_type invalide: %(type)s"],
-      "Invalid options for %(rolling_type)s: %(options)s": [
-        "Options invalides pour %(rolling_type)s: %(options)s"
-      ],
-      "`compare_columns` must have the same length as `source_columns`.": [
-        "`compare_columns` doit être de même longueur que `source_columns`."
-      ],
-      "`compare_type` must be `difference`, `percentage` or `ratio`": [
-        "`compare_type` doit être `difference`, `percentage` or `ratio`"
-      ],
-      "Invalid cumulative operator: %(operator)s": [
-        "Operateur cumulatif invalide: %(operator)s"
-      ],
-      "Invalid geohash string": ["Chaine de geohash invalide"],
-      "Invalid longitude/latitude": ["Invalide Longitude/Latitude"],
-      "Invalid geodetic string": ["Chaine de géodésie invalide"],
-      "Column \"%(column)s\" is not numeric or does not exists in the query results.": [
-        "La colonne \"%(column)s\" n'est pas numérique ou n'existe pas dans les résultats de requêtes."
-      ],
-      "`rename_columns` must have the same length as `columns`.": [
-        "`rename_columns` doit être de même longueur que `columns`."
-      ],
-      "`prophet` package not installed": ["`prophet` package non installé"],
-      "Time grain missing": ["Granularité de temps manquante"],
-      "Unsupported time grain: %(time_grain)s": [
-        "Granularité de Temps non supportée : %(time_grain)s"
-      ],
-      "Periods must be a positive integer value": [
-        "Les périodes doivent être des nombres entiers positifs"
-      ],
-      "Confidence interval must be between 0 and 1 (exclusive)": [
-        "L'intervalle de confiance doit être entre 0 et 1 (exclusif)"
-      ],
-      "DataFrame must include temporal column": [
-        "Dataframe doit inclure une colonne temporelle"
-      ],
-      "DataFrame include at least one series": [
-        "DataFrame doit comprendre au moins une série"
-      ],
-      "percentiles must be a list or tuple with two numeric values, of which the first is lower than the second value": [
-        "percentiles doit être une liste ou un couple de 2 valeurs dont le premier est inférieur au second"
       ],
       "User": ["Utilisateur"],
       "User Roles": ["Profils utilisateurs"],
@@ -1322,6 +1310,8 @@
       "An unknown error occurred. Please contact your Superset administrator": [
         "Une erreur s'est produite. Contactez votre admin superset"
       ],
+      "Form data not found in cache, reverting to chart metadata.": [""],
+      "Form data not found in cache, reverting to dataset metadata.": [""],
       "[Missing Dataset]": ["[jeu de données manquant]"],
       "alter this ": ["modifier ce "],
       "chart": ["graphique"],
@@ -1352,12 +1342,6 @@
       "Chart %(id)s not found": ["Graphique %(id)s non trouvé"],
       "Table %(table)s wasn't found in the database %(db)s": [
         "Table %(table)s pas trouvée dans la base de données %(db)s"
-      ],
-      "Can't find User '%(name)s', please ask your admin to create one.": [
-        "Impossible de trouver l'utilisateur '%(name)s', demandez à votre administrateur de le créer."
-      ],
-      "Can't find DruidCluster with cluster_name = '%(name)s'": [
-        "Impossible de trouver le DruidCluster avec cluster_name = '%(name)s"
       ],
       "One or more required fields are missing in the request. Please try again, and if the problem persists conctact your administrator.": [
         "Un ou plusieurs champs obligatoires manquent dans la requête. Merci de ré essayer et de contacter votre administrateur si le problème persiste."
@@ -1690,6 +1674,956 @@
       "Edit Log": ["Éditer le log"],
       "Action": ["Action"],
       "dttm": ["dttm"],
+      "Time": ["Temps"],
+      "A reference to the [Time] configuration, taking granularity into account": [
+        "Une référence à la configuration [Time] prends la granularité en compte"
+      ],
+      "Raw records": [""],
+      "Certified by %s": ["Certifié par %s"],
+      "description": ["description"],
+      "bolt": ["boulon"],
+      "Changing this control takes effect instantly": [
+        "La modification de ce contrôle prendra effet immédiatement"
+      ],
+      "Show info tooltip": [""],
+      "Advanced analytics": ["Analyses avancées"],
+      "This section contains options that allow for advanced analytical post processing of query results": [
+        "Cette section contient les options permettant un post traitement analytique avancé des résultats de requêtes"
+      ],
+      "Rolling window": ["Fenêtre glissante"],
+      "Rolling function": ["Fonction de fenêtre glissante"],
+      "None": ["Aucun"],
+      "Defines a rolling window function to apply, works along with the [Periods] text box": [
+        "Définit une fonction de fenêtre glissante à appliquer, fonctionne avec le champ texte [Périodes]"
+      ],
+      "Periods": ["Périodes"],
+      "Defines the size of the rolling window function, relative to the time granularity selected": [
+        "Définit la taille de la fonction de fenêtre glissante, par rapport à la granularité temporelle sélectionnée"
+      ],
+      "Min periods": ["Périodes min"],
+      "The minimum number of rolling periods required to show a value. For instance if you do a cumulative sum on 7 days you may want your \"Min Period\" to be 7, so that all data points shown are the total of 7 periods. This will hide the \"ramp up\" taking place over the first 7 periods": [
+        "Le nombre minimum de périodes glissantes requis pour afficher une valeur. Par exemple, si vous faites un somme cumulée sur 7 jours, vous souhaitez peut être que votre \"Min Période\" soit égale à 7, de sorte que tous les points de données affichés correspondent au total des 7 périodes. Ceci cachera la \"montée en puissance\" qui aura lieu au cours des 7 périodes"
+      ],
+      "Time comparison": ["Comparaison de temps"],
+      "Time shift": ["Décalage temporel"],
+      "Overlay one or more timeseries from a relative time period. Expects relative time deltas in natural language (example:  24 hours, 7 days, 52 weeks, 365 days). Free text is supported.": [
+        "Superposer une ou plusieurs séries temporelles d'une période relative. Attend des écarts temporels relatifs en langage naturel en anglais (exemple :  24 hours, 7 days, 52 weeks, 365 days). Le texte libre est supporté."
+      ],
+      "Calculation type": ["Choisir un type de calcul"],
+      "How to display time shifts: as individual lines; as the difference between the main time series and each time shift; as the percentage change; or as the ratio between series and time shifts.": [
+        "Comment afficher des décalages temporels : comme des lignes individuelles ; comme la différence entre les séries temporelles principales et chaque décalage temporel ; comme le pourcentage de changement; ou comme le ratio entre les séries et les décalages temporels."
+      ],
+      "Rule": ["Règle"],
+      "Pandas resample rule": ["Règle de ré-échantillonnage Pandas"],
+      "Pandas resample method": ["Méthode de ré-échantillonnage Pandas"],
+      "X Axis": ["Axe X"],
+      "X AXIS TITLE BOTTOM MARGIN": [""],
+      "Y Axis": ["Axe Y"],
+      "Y AXIS TITLE MARGIN": [""],
+      "Y AXIS TITLE POSITION": [""],
+      "Enable forecast": [""],
+      "Enable forecasting": [""],
+      "How many periods into the future do we want to predict": [""],
+      "Should yearly seasonality be applied. An integer value will specify Fourier order of seasonality.": [
+        ""
+      ],
+      "Should weekly seasonality be applied. An integer value will specify Fourier order of seasonality.": [
+        ""
+      ],
+      "Should daily seasonality be applied. An integer value will specify Fourier order of seasonality.": [
+        ""
+      ],
+      "Time related form attributes": ["Attributs de formulaire liés au temps"],
+      "Chart ID": ["ID Graphique"],
+      "The id of the active chart": ["L'identifiant du graphique actif"],
+      "Cache Timeout (seconds)": ["Timeout du cache (secondes)"],
+      "The number of seconds before expiring the cache": [
+        "Le nombre de secondes avant l'expiration du cache"
+      ],
+      "Time range endpoints": ["Bornes de la période temporelle"],
+      "Time range endpoints (SIP-15)": [
+        "Bornes de la période temporelle (SIP-15)"
+      ],
+      "Group by": ["Grouper par"],
+      "One or many columns to group by. High cardinality groupings should include a series limit to limit the number of fetched and rendered series.": [
+        "Une ou plusieurs colonnes doivent être regroupées. Les regroupements avec une cardinalité importante devraient inclure une limite de séries afin de limiter le nombre de séries récupérées et affichées."
+      ],
+      "Series": ["Séries"],
+      "Defines the grouping of entities. Each series is shown as a specific color on the chart and has a legend toggle": [
+        "Définit le regroupement d'entités. Chaque série est représentée par une couleur spécifique sur le graphique et masquée/affichée en cliquant sur sa légende"
+      ],
+      "Entity": ["Entité"],
+      "This defines the element to be plotted on the chart": [
+        "Ceci définit l'élément à tracer sur le graphique"
+      ],
+      "One or many metrics to display": [
+        "Une ou plusieurs métriques à afficher"
+      ],
+      "Choose a metric for right axis": [
+        "Choisir une mesure pour l'axe de droite"
+      ],
+      "Sort by": ["Trier par"],
+      "Metric used to define how the top series are sorted if a series or row limit is present. If undefined reverts to the first metric (where appropriate).": [
+        "Métrique utilisée pour définir comment les séries principales sont triées si une limite de série ou de ligne est définie. Si indéfini, la première métrique sera utilisée (si approprié)."
+      ],
+      "Metric used to calculate bubble size": [""],
+      "Metric assigned to the [X] axis": ["Métrique assignée à l'axe [X]"],
+      "Metric assigned to the [Y] axis": ["Métrique assignée à l'axe [Y]"],
+      "A metric to use for color": ["Une métrique à utiliser par couleur"],
+      "The time column for the visualization. Note that you can define arbitrary expression that return a DATETIME column in the table. Also note that the filter below is applied against this column or expression": [
+        "La colonne temps pour la visualisation. Notez que vous pouvez définir arbitrairement l'expression que retourne la colonne DATETIME dans la table. Aussi noter que le filtre ci-dessous est appliqué à cette colonne ou expression"
+      ],
+      "The type of visualization to display": [
+        "Le type de visualisation à afficher"
+      ],
+      "Use this to define a static color for all circles": [
+        "Utiliser ceci pour définir une couleur statique pour tous les cercles"
+      ],
+      "Defines the origin where time buckets start, accepts natural dates as in `now`, `sunday` or `1970-01-01`": [
+        "Définir l'origine des intervalles de temps, accepte les dates naturelles comme dans`now`, `sunday` ou `1970-01-01`"
+      ],
+      "The time granularity for the visualization. Note that you can type and use simple natural language as in `10 seconds`, `1 day` or `56 weeks`": [
+        "La granularité temporelle pour la visualisation. Noter que vous pouvez taper etu tiliser le langage naturel comme `10 seconds`, `1 day` ou `56 weeks`"
+      ],
+      "The time granularity for the visualization. This applies a date transformation to alter your time column and defines a new time granularity. The options here are defined on a per database engine basis in the Superset source code.": [
+        "Le granularité de temps pour la visualisation. Ceci applique une transformation de date pour modifier votre colonne de temps et définit une nouvelle granularité d'heure. Les options ici sont définies pour chaque type de SGBD dans le code source de Superset."
+      ],
+      "No filter": ["Pas de filtre"],
+      "The time range for the visualization. All relative times, e.g. \"Last month\", \"Last 7 days\", \"now\", etc. are evaluated on the server using the server's local time (sans timezone). All tooltips and placeholder times are expressed in UTC (sans timezone). The timestamps are then evaluated by the database using the engine's local timezone. Note one can explicitly set the timezone per the ISO 8601 format if specifying either the start and/or end time.": [
+        "L'intervalle de temps pour la visualisation. Tous les temps relatifs, par exemple \"Mois dernier\", \"7 derniers jours\", \"maintenant\", etc. sont évalués sur le serveur en utilisant l'heure locale du serveur (sans fuseau horaire). Toutes les infobulles et les heures des \"placeholders\" sont exprimées en UTC (sans fuseau). Les timestamps sont alors évalués par la base données en utilisant le fuseau horaire local du serveur. Notez que l'on peut indiquer explicitement la fuseau horaire dans le format ISO 8601 quand on spécifie l'heure de début et/ou de fin."
+      ],
+      "Row limit": ["Nombre de lignes max"],
+      "Limits the number of rows that get displayed.": [
+        "Limite le nombre de lignes qui sont affichées."
+      ],
+      "Series limit": ["Nombre de séries max"],
+      "Limits the number of series that get displayed. A joined subquery (or an extra phase where subqueries are not supported) is applied to limit the number of series that get fetched and rendered. This feature is useful when grouping by high cardinality column(s) though does increase the query complexity and cost.": [
+        "Limite le nombre de séries affichées. Une sous-requête associée (ou une phase supplémentaire dans laquelle les sous-requêtes ne sont pas prises en charge) est appliquée pour limiter le nombre de séries qui sont récupérées et affichées. Cette fonctionnalité est utile lors du regroupement par colonne(s) de cardinalité(s) élevée(s) bien que cela augmente la complexité et le coût de la requête."
+      ],
+      "Y Axis Format": ["Format de l'axe Y"],
+      "When `Calculation type` is set to \"Percentage change\", the Y Axis Format is forced to `.1%`": [
+        "Lorsque `Type de calcul` vaut \"Pourcentage de changement\", le format de l'axe Y est à forcé à `.1%`"
+      ],
+      "The color scheme for rendering chart": [
+        "Le jeu de couleur pour le rendu graphique"
+      ],
+      "Sort descending": ["Tri décroissant"],
+      "If you wish to specify a different target column than the original column, it can be entered here": [
+        ""
+      ],
+      "D3 format": ["Format D3"],
+      "Fraction digits": [""],
+      "Number of decimal digits to round numbers to": [""],
+      "Default minimal column width in pixels, actual width may still be larger than this if other columns don't need much space": [
+        ""
+      ],
+      "Text align": [""],
+      "Horizontal alignment": [""],
+      "Show cell bars": [""],
+      "Whether to display a bar chart background in table columns": [""],
+      "Align +/-": [""],
+      "Whether to align positive and negative values in cell bar chart at 0": [
+        ""
+      ],
+      "Color +/-": [""],
+      "Whether to colorize numeric values by if they are positive or negative": [
+        ""
+      ],
+      "Small number format": [""],
+      "D3 number format for numbers between -1.0 and 1.0, useful when you want to have different siginificant digits for small and large numbers": [
+        ""
+      ],
+      "D3 format syntax: https://github.com/d3/d3-format": [""],
+      "Duration in ms (66000 => 1m 6s)": [""],
+      "Duration in ms (1.40008 => 1ms 400µs 80ns)": [""],
+      "D3 time format syntax: https://github.com/d3/d3-time-format": [""],
+      "No results were returned for this query. If you expected results to be returned, ensure any filters are configured properly and the datasource contains data for the selected time range.": [
+        ""
+      ],
+      "Found invalid orderby options": [""],
+      "is expected to be an integer": [""],
+      "is expected to be a number": [""],
+      "Query": ["Requête"],
+      "The time unit used for the grouping of blocks": [""],
+      "Subdomain": [""],
+      "The time unit for each block. Should be a smaller unit than domain_granularity. Should be larger or equal to Time Grain": [
+        ""
+      ],
+      "The size of the square cell, in pixels": [""],
+      "Cell Padding": [""],
+      "The distance between cells, in pixels": [""],
+      "Cell Radius": [""],
+      "The pixel radius": [""],
+      "The number color \"steps\"": [""],
+      "Whether to display the legend (toggles)": [""],
+      "Whether to display the numerical values within the cells": [""],
+      "Whether to display the metric name as a title": [""],
+      "Visualizes how a metric has changed over a time using a color scale and a calendar view. Gray values are used to indicate missing values and the linear color scheme is used to encode the magnitude of each day's value.": [
+        ""
+      ],
+      "Business": [""],
+      "Comparison": ["Comparaison"],
+      "Trend": ["Tendance"],
+      "Whether to sort results by the selected metric in descending order.": [
+        ""
+      ],
+      "Source": ["Source"],
+      "Showcases the flow or link between categories using thickness of chords. The value and corresponding thickness can be different for each side.": [
+        ""
+      ],
+      "Relationships between community channels": [""],
+      "Chord Diagram": [""],
+      "Aesthetic": [""],
+      "Circular": [""],
+      "Legacy": ["Legacy"],
+      "Proportional": [""],
+      "Which country to plot the map for?": [""],
+      "ISO 3166-2 Codes": [""],
+      "Column containing ISO 3166-2 codes of region/province/department in your table.": [
+        ""
+      ],
+      "Visualizes how a single metric varies across a country's principal subdivisions (states, provinces, etc) on a chloropleth map. Each subdivision's value is elevated when you hover over the corresponding geographic boundary.": [
+        ""
+      ],
+      "2D": [""],
+      "Geo": [""],
+      "Sorry, there appears to be no data": [""],
+      "Event definition": [""],
+      "Order by entity id": [""],
+      "Important! Select this if the table is not already sorted by entity id, else there is no guarantee that all events for each entity are returned.": [
+        ""
+      ],
+      "Minimum leaf node event count": [""],
+      "Leaf nodes that represent fewer than this number of events will be initially hidden in the visualization": [
+        ""
+      ],
+      "Select any columns for metadata inspection": [""],
+      "Max Events": [""],
+      "The maximum number of events to return, equivalent to the number of rows": [
+        ""
+      ],
+      "Compares the lengths of time different activities take in a shared timeline view.": [
+        ""
+      ],
+      "Progressive": [""],
+      "Link Length": [""],
+      "Link length in the force layout": [""],
+      "Charge in the force layout": [""],
+      "Force-directed Graph": [""],
+      "Heatmap Options": [""],
+      "Number of steps to take between ticks when displaying the X scale": [""],
+      "Number of steps to take between ticks when displaying the Y scale": [""],
+      "image-rendering CSS attribute of the canvas object that defines how the browser scales up the image": [
+        ""
+      ],
+      "Normalize Across": [""],
+      "Color will be rendered based on a ratio of the cell against the sum of across this criteria": [
+        ""
+      ],
+      "Left Margin": [""],
+      "Left margin, in pixels, allowing for more room for axis labels": [""],
+      "Bottom Margin": [""],
+      "Bottom margin, in pixels, allowing for more room for axis labels": [""],
+      "Value bounds": [""],
+      "Hard value bounds applied for color coding. Is only relevant and applied when the normalization is applied against the whole heatmap.": [
+        ""
+      ],
+      "Sort X Axis": [""],
+      "Sort Y Axis": [""],
+      "Normalized": [""],
+      "Whether to apply a normal distribution based on rank on the color scale": [
+        ""
+      ],
+      "Visualize a related metric across pairs of groups. Heatmaps excel at showcasing the correlation or strength between two groups. Color is used to emphasize the strength of the link between each pair of groups.": [
+        ""
+      ],
+      "Sizes of vehicles": [""],
+      "Employment and education": [""],
+      "percentile (exclusive)": [""],
+      "Select the numeric columns to draw the histogram": [""],
+      "Select the number of bins for the histogram": [""],
+      "X Axis Label": [""],
+      "Y Axis Label": [""],
+      "Whether to normalize the histogram": [""],
+      "Whether to make the histogram cumulative": [""],
+      "Take your data points, and group them into \"bins\" to see where the densest areas of information lie": [
+        ""
+      ],
+      "Population age data": [""],
+      "Whether to sort descending or ascending": [
+        "Trier par ordre décroissant ou croissant"
+      ],
+      "Contribution": ["Contribution"],
+      "Compute the contribution to the total": [
+        "Calculer la contribution au total"
+      ],
+      "Pixel height of each series": [""],
+      "Value Domain": [""],
+      "series: Treat each series independently; overall: All series use the same scale; change: Show changes compared to the first data point in each series": [
+        ""
+      ],
+      "Compares how a metric changes over time between different groups. Each group is mapped to a row and change over time is visualized bar lengths and color.": [
+        ""
+      ],
+      "Longitude": [""],
+      "Column containing longitude data": [""],
+      "Latitude": [""],
+      "Column containing latitude data": [""],
+      "Clustering Radius": [""],
+      "The radius (in pixels) the algorithm uses to define a cluster. Choose 0 to turn off clustering, but beware that a large number of points (>1000) will cause lag.": [
+        ""
+      ],
+      "Point Radius": [""],
+      "The radius of individual points (ones that are not in a cluster). Either a numerical column or `Auto`, which scales the point based on the largest cluster": [
+        ""
+      ],
+      "Point Radius Unit": [""],
+      "The unit of measure for the specified point radius": [""],
+      "Labelling": [""],
+      "`count` is COUNT(*) if a group by is used. Numerical columns will be aggregated with the aggregator. Non-numerical columns will be used to label points. Leave empty to get a count of points in each cluster.": [
+        ""
+      ],
+      "Cluster label aggregator": [""],
+      "Aggregate function applied to the list of points in each cluster to produce the cluster label.": [
+        ""
+      ],
+      "Visual Tweaks": [""],
+      "Live render": [""],
+      "Points and clusters will update as the viewport is being changed": [""],
+      "Base layer map style": [""],
+      "Opacity": ["Opacité"],
+      "Opacity of all clusters, points, and labels. Between 0 and 1.": [""],
+      "The color for points and clusters in RGB": [""],
+      "Longitude of default viewport": [""],
+      "Latitude of default viewport": [""],
+      "Zoom": [""],
+      "Zoom level of the map": [""],
+      "One or many controls to group by. If grouping, latitude and longitude columns must be present.": [
+        ""
+      ],
+      "Light mode": [""],
+      "Dark mode": [""],
+      "Scatter": [""],
+      "Transformable": [""],
+      "Significance Level": [""],
+      "Threshold alpha level for determining significance": [""],
+      "p-value precision": [""],
+      "Number of decimal places with which to display p-values": [""],
+      "Lift percent precision": [""],
+      "Number of decimal places with which to display lift values": [""],
+      "Table that visualizes paired t-tests, which are used to understand statistical differences between groups.": [
+        ""
+      ],
+      "Paired t-test Table": [""],
+      "Statistical": [""],
+      "Tabular": ["Tabulaire"],
+      "Whether to display the interactive data table": [""],
+      "Include Series": [""],
+      "Include series name as an axis": [""],
+      "Plots the individual metrics for each row in the data vertically and links them together as a line. This chart is useful for comparing multiple metrics across all of the samples or rows in the data.": [
+        ""
+      ],
+      "Ignore time": [""],
+      "Standard time series": [""],
+      "Mean of values over specified period": [""],
+      "Sum of values over specified period": [""],
+      "Metric change in value from `since` to `until`": [""],
+      "Metric percent change in value from `since` to `until`": [""],
+      "Metric factor change from `since` to `until`": [""],
+      "Use the Advanced Analytics options below": [""],
+      "Settings for time series": [""],
+      "The maximum number of subdivisions of each group; lower values are pruned first": [
+        ""
+      ],
+      "Partition Threshold": [""],
+      "Partitions whose height to parent height proportions are below this value are pruned": [
+        ""
+      ],
+      "Log Scale": [""],
+      "Use a log scale": [""],
+      "Equal Date Sizes": [""],
+      "Check to force date partitions to have the same height": [""],
+      "Rich Tooltip": [""],
+      "The rich tooltip shows a list of all series for that point in time": [
+        ""
+      ],
+      "Method": ["Méthode"],
+      "Part of a Whole": [""],
+      "Compare the same summarized metric across multiple groups.": [""],
+      "Aggregate function to apply when pivoting and computing the total rows and columns": [
+        ""
+      ],
+      "Show totals": [""],
+      "Display total row/column": [""],
+      "Display metrics side by side within each column, as opposed to each column being displayed side by side for each metric.": [
+        ""
+      ],
+      "Transpose Pivot": [""],
+      "Swap Groups and Columns": [""],
+      "Used to summarize a set of data by grouping together multiple statistics along two axes. Examples: Sales numbers by region and month, tasks by status and assignee, active users by age and location.\n\n  This chart is being deprecated and we recommend checking out Pivot Table V2 instead!": [
+        ""
+      ],
+      "Check if the Rose Chart should use segment area instead of segment radius for proportioning": [
+        ""
+      ],
+      "A polar coordinate chart where the circle is broken into wedges of equal angle, and the value represented by any wedge is illustrated by its area, rather than its radius or sweep angle.": [
+        ""
+      ],
+      "Advanced-Analytics": ["Analyses avancées"],
+      "Multi-Layers": [""],
+      "Limiting rows may result in incomplete data and misleading charts. Consider filtering or grouping source/target names instead.": [
+        ""
+      ],
+      "Visualizes the flow of different group's values through different stages of a system. New stages in the pipeline are visualized as nodes or layers. The thickness of the bars or edges represent the metric being visualized.": [
+        ""
+      ],
+      "Demographics": [""],
+      "Survey Responses": [""],
+      "Sankey Diagram": [""],
+      "Percentages": ["Pourcentages"],
+      "Sankey Diagram with Loops": [""],
+      "The primary metric is used to define the arc segment sizes": [""],
+      "[optional] this secondary metric is used to define the color as a ratio against the primary metric. When omitted, the color is categorical and based on labels": [
+        ""
+      ],
+      "When only a primary metric is provided, a categorical color scale is used.": [
+        ""
+      ],
+      "When a secondary metric is provided, a linear color scale is used.": [
+        ""
+      ],
+      "Uses circles to visualize the flow of data through different stages of a system. Hover over individual paths in the visualization to understand the stages a value took. Useful for multi-stage, multi-group visualizing funnels and pipelines.": [
+        ""
+      ],
+      "Multi-Levels": [""],
+      "Target aspect ratio for treemap tiles.": [""],
+      "Shows the composition of a dataset by segmenting a given rectangle as smaller rectangles with areas proportional to their value or contribution to the whole. Those rectangles may also, in turn, be further segmented hierarchically.": [
+        ""
+      ],
+      "Country Field Type": [""],
+      "The country code standard that Superset should expect to find in the [country] column": [
+        ""
+      ],
+      "Whether to display bubbles on top of countries": [""],
+      "Metric that defines the color of the country": [""],
+      "Metric that defines the size of the bubble": [""],
+      "A map of the world, that can indicate values in different countries.": [
+        ""
+      ],
+      "Multi-Variables": ["Multi-Variables"],
+      "Popular": ["Populaires"],
+      "Pick a set of deck.gl charts to layer on top of one another": [""],
+      "Compose multiple layers together to form complex visuals.": [""],
+      "deckGL": [""],
+      "Data has no time steps": [""],
+      "Point to your spatial columns": [""],
+      "Pick a dimension from which categorical colors are defined": [""],
+      "Advanced": ["Avancé"],
+      "Plot the distance (like flight paths) between origin and destination.": [
+        ""
+      ],
+      "3D": [""],
+      "Web": [""],
+      "Point Radius Scale": [""],
+      "The GeoJsonLayer takes in GeoJSON formatted data and renders it as interactive polygons, lines and points (circles, icons and/or texts).": [
+        ""
+      ],
+      "Height": ["Hauteur"],
+      "Metric used to control height": [""],
+      "Visualize geospatial data like 3D buildings, landscapes, or objects in grid view.": [
+        ""
+      ],
+      "Experimental": [""],
+      "The function to use when aggregating points into groups": [""],
+      "Overlays a hexagonal grid on a map, and aggregates data within the boundary of each cell.": [
+        ""
+      ],
+      "Visualizes connected points, which form a path, on a map.": [""],
+      "Opacity, expects values between 0 and 100": [""],
+      "Number of buckets to group data": [""],
+      "How many buckets should the data be grouped in.": [""],
+      "Bucket break points": [""],
+      "List of n+1 values for bucketing metric into n buckets.": [""],
+      "Whether to apply filter when items are clicked": [""],
+      "Allow sending multiple polygons as a filter event": [""],
+      "Visualizes geographic areas from your data as polygons on a Mapbox rendered map. Polygons can be colored using a metric.": [
+        ""
+      ],
+      "Point Unit": [""],
+      "Minimum Radius": [""],
+      "Minimum radius size of the circle, in pixels. As the zoom level changes, this insures that the circle respects this minimum radius.": [
+        ""
+      ],
+      "Maximum Radius": [""],
+      "Maxium radius size of the circle, in pixels. As the zoom level changes, this insures that the circle respects this maximum radius.": [
+        ""
+      ],
+      "A map that takes rendering circles with a variable radius at latitude/longitude coordinates": [
+        ""
+      ],
+      "Metric used as a weight for the grid's coloring": [""],
+      "Aggregates data within the boundary of grid cells and maps the aggregated values to a dynamic color scale": [
+        ""
+      ],
+      "For more information about objects are in context in the scope of this function, refer to the": [
+        ""
+      ],
+      " source code of Superset's sandboxed parser": [""],
+      "This functionality is disabled in your environment for security reasons.": [
+        ""
+      ],
+      "Ignore null locations": [""],
+      "Whether to ignore locations that are null": [""],
+      "Auto Zoom": [""],
+      "When checked, the map will zoom to your data after each query": [""],
+      "Extra data for JS": [""],
+      "List of extra columns made available in Javascript functions": [""],
+      "Javascript data interceptor": [""],
+      "Define a javascript function that receives the data array used in the visualization and is expected to return a modified version of that array. This can be used to alter properties of the data, filter, or enrich the array.": [
+        ""
+      ],
+      "Javascript tooltip generator": [""],
+      "Define a function that receives the input and outputs the content for a tooltip": [
+        ""
+      ],
+      "Javascript onClick href": [""],
+      "Define a function that returns a URL to navigate to when user clicks": [
+        ""
+      ],
+      "Line width": ["L'épaisseur de la ligne"],
+      " Set the opacity to 0 if you do not want to override the color specified in the GeoJSON": [
+        ""
+      ],
+      "Defines the grid size in pixels": [""],
+      "Parameters related to the view and perspective on the map": [""],
+      "Fixed point radius": [""],
+      "Factor to multiply the metric by": [""],
+      "Show Markers": [""],
+      "Show data points as circle markers on the lines": [""],
+      "Y bounds": [""],
+      "Whether to display the min and max values of the Y-axis": [""],
+      "Y 2 bounds": [""],
+      "Line Style": [""],
+      "Line interpolation as defined by d3.js": [""],
+      "Whether to display the time range interactive selector": [""],
+      "Extra Controls": [""],
+      "Whether to show extra controls or not. Extra controls include things like making mulitBar charts stacked or side by side.": [
+        ""
+      ],
+      "X Tick Layout": [""],
+      "The way the ticks are laid out on the X-axis": [""],
+      "Y Log Scale": [""],
+      "Use a log scale for the Y-axis": [""],
+      "Y Axis Bounds": [""],
+      "Bounds for the Y-axis. When left empty, the bounds are dynamically defined based on the min/max of the data. Note that this feature will only expand the axis range. It won't narrow the data's extent.": [
+        ""
+      ],
+      "Y Axis 2 Bounds": [""],
+      "X bounds": [""],
+      "Whether to display the min and max values of the X-axis": [""],
+      "Show the value on top of the bar": [""],
+      "Stacked Bars": [""],
+      "Reduce X ticks": [""],
+      "Reduces the number of X-axis ticks to be rendered. If true, the x-axis will not overflow and labels may be missing. If false, a minimum width will be applied to columns and the width may overflow into an horizontal scroll.": [
+        ""
+      ],
+      "You cannot use 45° tick layout along with the time range filter": [""],
+      "Stacked Style": [""],
+      "Evolution": [""],
+      "A time series chart that visualizes how a related metric from multiple groups vary over time. Each group is visualized using a different color.": [
+        ""
+      ],
+      "Stacked style": [""],
+      "Video game consoles": [""],
+      "Continuous": [""],
+      "nvd3": [""],
+      "Visualize how a metric changes over time using bars. Add a group by column to visualize group level metrics and how they change over time.": [
+        ""
+      ],
+      "X Log Scale": [""],
+      "Use a log scale for the X-axis": [""],
+      "Visualizes a metric across three dimensions of data in a single chart (X axis, Y axis, and bubble size). Bubbles from the same group can be showcased using bubble color.": [
+        ""
+      ],
+      "Ranges to highlight with shading": [""],
+      "Range labels": [""],
+      "Labels for the ranges": [""],
+      "List of values to mark with triangles": [""],
+      "Labels for the markers": [""],
+      "Marker lines": [""],
+      "List of values to mark with lines": [""],
+      "Marker line labels": [""],
+      "Labels for the marker lines": [""],
+      "KPI": [""],
+      "Showcases the progress of a single metric against a given target. The higher the fill, the closer the metric is to the target.": [
+        ""
+      ],
+      "Visualizes many different time-series objects in a single chart. This chart is being deprecated and we recommend using the Time-series Chart instead.": [
+        ""
+      ],
+      "Sort bars by x labels.": [""],
+      "Defines how each series is broken down": [""],
+      "Compares metrics from different categories using bars. Bar lengths are used to indicate the magnitude of each value and color is used to differentiate groups.": [
+        ""
+      ],
+      "Y Axis 1": [""],
+      "Y Axis 2": [""],
+      "Visualizes 2 metrics as line plots using the same x-axis. This chart is useful for comparing metrics across the same time range.": [
+        ""
+      ],
+      "Propagate": [""],
+      "Send range filter events to other charts": [""],
+      "Classic chart that visualizes how metrics change over time.": [""],
+      "Battery level over time": [""],
+      "Prefix metric name with slice name": [""],
+      "Y Axis Left": [""],
+      "Left Axis chart(s)": [""],
+      "Y Axis Right": [""],
+      "Visualize two different time series using the same x-axis time range. This chart is being deprecated and we recommend using the Mixed Timeseries Chart instead!": [
+        ""
+      ],
+      "What should be shown on the label?": [""],
+      "Do you want a donut or a pie?": [""],
+      "Whether to display the labels. Note that the label only displays when the the 5% threshold.": [
+        ""
+      ],
+      "Put labels outside": [""],
+      "Put the labels outside the pie?": [""],
+      "The periodicity over which to pivot time. Users can provide\n            \"Pandas\" offset alias.\n            Click on the info bubble for more details on accepted \"freq\" expressions.": [
+        ""
+      ],
+      "Show legend": [""],
+      "Whether to display a legend for the chart": [""],
+      "Show series values on the chart": [""],
+      "Stack series": [""],
+      "Stack series on top of each other": [""],
+      "Only Total": [""],
+      "Only show the total value on the stacked chart, and not show on the selected category": [
+        ""
+      ],
+      "Dimension to use on x-axis.": [""],
+      "Minimum threshold in percentage points for showing labels.": [""],
+      "Rich tooltip": [""],
+      "Shows a list of all series available at that point in time": [""],
+      "Whether to sort tooltip by the selected metric in descending order.": [
+        ""
+      ],
+      "Tooltip": [""],
+      "Not up to date": [""],
+      "No data": ["Pas de données"],
+      "No data after filtering or data is NULL for the latest time record": [
+        ""
+      ],
+      "Try applying different filters or ensuring your datasource has data": [
+        ""
+      ],
+      "Big Number Font Size": [""],
+      "Small": [""],
+      "Normal": [""],
+      "Huge": [""],
+      "Subheader Font Size": [""],
+      "Description text that shows up below your Big Number": [""],
+      "Use date formatting even when metric value is not a timestamp": [""],
+      "Showcases a single metric front-and-center. Big number is best used to call attention to a KPI or the one thing you want your audience to focus on.": [
+        ""
+      ],
+      "With a subheader": [""],
+      "Comparison Period Lag": [""],
+      "Based on granularity, number of time periods to compare against": [""],
+      "Suffix to apply after the percentage display": [""],
+      "Whether to display the timestamp": [""],
+      "Show Trend Line": [""],
+      "Whether to display the trend line": [""],
+      "Start y-axis at 0": [""],
+      "Start y-axis at zero. Uncheck to start y-axis at minimum value in the data.": [
+        ""
+      ],
+      "Fix the trend line to the full time range specified in case filtered results do not include the start or end dates": [
+        ""
+      ],
+      "Showcases a single number accompanied by a simple line chart, to call attention to an important metric along with its change over time or other dimension.": [
+        ""
+      ],
+      "Whisker/outlier options": [""],
+      "Determines how whiskers and outliers are calculated.": [""],
+      "Categories to group by on the x-axis.": [""],
+      "Columns to calculate distribution across. Defaults to temporal column if left empty.": [
+        ""
+      ],
+      "Also known as a box and whisker plot, this visualization compares the distributions of a related metric across multiple groups. The box in the middle emphasizes the mean, median, and inner 2 quartiles. The whiskers around each box visualize the min, max, range, and outer 2 quartiles.": [
+        ""
+      ],
+      "ECharts": ["EGraphiques"],
+      "Whether to display the labels.": [""],
+      "Showcases how a metric changes as the funnel progresses. This classic chart is useful for visualizing drop-off between stages in a pipeline or lifecycle.": [
+        ""
+      ],
+      "Sequential": [""],
+      "Columns to group by": [""],
+      "General": [""],
+      "Min": ["Min"],
+      "Minimum value on the gauge axis": [""],
+      "Max": ["Max"],
+      "Maximum value on the gauge axis": [""],
+      "Angle at which to start progress axis": [""],
+      "Angle at which to end progress axis": [""],
+      "Font size": [""],
+      "Font size for axis labels, detail value and other text elements": [""],
+      "Additional text to add before or after the value, e.g. unit": [""],
+      "Show pointer": [""],
+      "Whether to show the pointer": [""],
+      "Whether to animate the progress and the value or just display them": [
+        ""
+      ],
+      "Show axis line ticks": [""],
+      "Whether to show minor ticks on the axis": [""],
+      "Show split lines": [""],
+      "Whether to show the split lines on the axis": [""],
+      "Number of split segments on the axis": [""],
+      "Progress": [""],
+      "Whether to show the progress of gauge chart": [""],
+      "Whether the progress bar overlaps when there are multiple groups of data": [
+        ""
+      ],
+      "Style the ends of the progress bar with a round cap": [""],
+      "Comma-separated interval bounds, e.g. 2,4,5 for intervals 0-2, 2-4 and 4-5. Last number should match the value provided for MAX.": [
+        ""
+      ],
+      "Comma-separated color picks for the intervals, e.g. 1,2,4. Integers denote colors from the chosen color scheme and are 1-indexed. Length must be matching that of interval bounds.": [
+        ""
+      ],
+      "Uses a gauge to showcase progress of a metric towards a target. The position of the dial represents the progress and the terminal value in the gauge represents the target value.": [
+        ""
+      ],
+      "Name of the source nodes": [""],
+      "Name of the target nodes": [""],
+      "The category of source nodes used to assign colors. If a node is associated with more than one category, only the first will be used.": [
+        ""
+      ],
+      "Category of target nodes": [""],
+      "Layout": [""],
+      "Graph layout": [""],
+      "Layout type of graph": [""],
+      "Edge symbols": [""],
+      "Symbol of two ends of edge line": [""],
+      "None -> None": [""],
+      "None -> Arrow": [""],
+      "Circle -> Arrow": [""],
+      "Circle -> Circle": [""],
+      "Enable node dragging": [""],
+      "Whether to enable node dragging in force layout mode.": [""],
+      "Enable graph roaming": [""],
+      "Scale only": [""],
+      "Move only": [""],
+      "Scale and Move": [""],
+      "Whether to enable changing graph position and scaling.": [""],
+      "Multiple": [""],
+      "Label threshold": [""],
+      "Minimum value for label to be displayed on graph.": [""],
+      "Median node size, the largest node will be 4 times larger than the smallest": [
+        ""
+      ],
+      "Median edge width, the thickest edge will be 4 times thicker than the thinnest.": [
+        ""
+      ],
+      "Edge length": [""],
+      "Edge length between nodes": [""],
+      "Gravity": [""],
+      "Strength to pull the graph toward center": [""],
+      "Repulsion strength between nodes": [""],
+      "Friction between nodes": [""],
+      "Displays connections between entities in a graph structure. Useful for mapping relationships and showing which nodes are important in a network. Graph charts can be configured to be force-directed or circulate. If your data has a geospatial component, try the deck.gl Arc chart.": [
+        ""
+      ],
+      "Structural": [""],
+      "Series chart type (line, bar etc)": [""],
+      "Draw area under curves. Only applicable for line types.": [""],
+      "Opacity of area chart.": [""],
+      "Draw a marker on data points. Only applicable for line types.": [""],
+      "Marker size": [""],
+      "Size of marker. Also applies to forecast observations.": [""],
+      "Primary or secondary y-axis": [""],
+      "Data Zoom": [""],
+      "Enable data zooming controls": [""],
+      "Rotate x axis label": [""],
+      "Input field supports custom rotation. e.g. 30 for 30°": [""],
+      "Minor Split Line": [""],
+      "Draw split lines for minor y-axis ticks": [""],
+      "Truncate Y Axis": [""],
+      "Truncate Y Axis. Can be overridden by specifying a min or max bound.": [
+        ""
+      ],
+      "Primary y-axis format": [""],
+      "Logarithmic y-axis": [""],
+      "Logarithmic scale on primary y-axis": [""],
+      "Secondary y-axis format": [""],
+      "Secondary y-axis title": [""],
+      "Logarithmic scale on secondary y-axis": [""],
+      "Visualize two different time series using the same x-axis time range. Note that each time series can be visualized differently (e.g. 1 using bars and 1 using a line).": [
+        ""
+      ],
+      "Mixed Time-Series": [""],
+      "Put the labels outside of the pie?": [""],
+      "Label Line": [""],
+      "Draw line from Pie to label when labels outside?": [""],
+      "Outer Radius": [""],
+      "Inner Radius": [""],
+      "Inner radius of donut hole": [""],
+      "The classic. Great for showing how much of a company each investor gets, what demographics follow your blog, or what portion of the budget goes to the military industrial complex.\n\n        Pie charts can be difficult to interpret precisely. If clarity of relative proportion is important, consider using a bar or other chart type instead.": [
+        ""
+      ],
+      "The maximum value of metrics. It is an optional configuration": [""],
+      "Radar": [""],
+      "Further customize how to display each metric": [""],
+      "Circle radar shape": [""],
+      "Radar render type, whether to display 'circle' shape.": [""],
+      "Visualize a parallel set of metrics across multiple groups. Each group is visualized using its own line of points and each metric is represented as an edge in the chart.": [
+        ""
+      ],
+      "Area chart opacity": [""],
+      "Opacity of Area Chart. Also applies to confidence band.": [""],
+      "Marker Size": [""],
+      "Swiss army knife for visualizing data. Choose between  step, line, scatter, and bar charts. This viz type has many customization options as well.": [
+        ""
+      ],
+      "Swiss army knife for visualizing time series data. Choose between  step, line, scatter, and bar charts. This viz type has many customization options as well.": [
+        ""
+      ],
+      "Area charts are similar to line charts in that they represent variables with the same scale, but area charts stack the metrics on top of each other.": [
+        ""
+      ],
+      "Time-series Area chart are similar to line chart in that they represent variables with the same scale, but area charts stack the metrics on top of each other. An area chart in Superset can be stream, stack, or expand.": [
+        ""
+      ],
+      "It’s not recommended to truncate y-axis in Bar chart.": [""],
+      "Bar Charts are used to show metrics as a series of bars.": [""],
+      "Time-series Bar Charts are used to show the changes in a metric over time as a series of bars.": [
+        ""
+      ],
+      "Line chart is used to visualize measurements taken over a given category. Line chart is a type of chart which displays information as a series of data points connected by straight line segments. It is a basic type of chart common in many fields.": [
+        ""
+      ],
+      "Time-series line chart is used to visualize repeated measurements taken over regular time intervals. Line chart is a type of chart which displays information as a series of data points connected by straight line segments. It is a basic type of chart common in many fields.": [
+        ""
+      ],
+      "Scatter Plot has the horizontal axis in linear units, and the points are connected in order. It shows a statistical relationship between two variables.": [
+        ""
+      ],
+      "Time-series Scatter Plot has time on the horizontal axis in linear units, and the points are connected in order. It shows a statistical relationship between two variables.": [
+        ""
+      ],
+      "Smooth-line is a variation of the line chart. Without angles and hard edges, Smooth-line sometimes looks smarter and more professional.": [
+        ""
+      ],
+      "Time-series Smooth-line is a variation of the line chart. Without angles and hard edges, Smooth-line sometimes looks smarter and more professional.": [
+        ""
+      ],
+      "Smooth Line": [""],
+      "Defines whether the step should appear at the beginning, middle or end between two data points": [
+        ""
+      ],
+      "Stepped-line graph (also called step chart) is a variation of line chart but with the line forming a series of steps between data points. A step chart can be useful when you want to show the changes that occur at irregular intervals.": [
+        ""
+      ],
+      "Time-series Stepped-line graph (also called step chart) is a variation of line chart but with the line forming a series of steps between data points. A step chart can be useful when you want to show the changes that occur at irregular intervals.": [
+        ""
+      ],
+      "Parent": [""],
+      "Name of the column containing the id of the parent node": [""],
+      "Optional name of the data column.": [""],
+      "Root node id": [""],
+      "Id of root node of the tree.": [""],
+      "Metric for node values": [""],
+      "Tree layout": [""],
+      "Orthogonal": [""],
+      "Layout type of tree": [""],
+      "Left to Right": [""],
+      "Right to Left": [""],
+      "Top to Bottom": [""],
+      "Bottom to Top": [""],
+      "Node label position": [""],
+      "Position of intermidiate node label on tree": [""],
+      "Child label position": [""],
+      "Position of child node label on tree": [""],
+      "Emphasis": [""],
+      "ancestor": [""],
+      "Which relatives to highlight on hover": [""],
+      "Empty circle": [""],
+      "Triangle": [""],
+      "Size of edge symbols": [""],
+      "Visualize multiple levels of hierarchy using a familiar tree-like structure.": [
+        ""
+      ],
+      "Show Upper Labels": [""],
+      "Show labels when the node has children.": [""],
+      "Show hierarchical relationships of data, with with the value represented by area, showing proportion and contribution to the whole.": [
+        ""
+      ],
+      "Columns to group by on the columns": [""],
+      "Rows": ["Lignes"],
+      "Columns to group by on the rows": [""],
+      "Use metrics as a top level group for columns or for rows": [""],
+      "Show rows total": [""],
+      "Display row level total": [""],
+      "Display column level total": [""],
+      "Transpose pivot": [""],
+      "Swap rows and columns": [""],
+      "D3 time format for datetime columns": [""],
+      "key a-z": [""],
+      "key z-a": [""],
+      "Change order of rows.": [""],
+      "Available sorting modes:": [""],
+      "By key: use row names as sorting key": [""],
+      "By value: use metric values as sorting key": [""],
+      "Change order of columns.": [""],
+      "By key: use column names as sorting key": [""],
+      "Rows subtotal position": [""],
+      "Position of row level subtotal": [""],
+      "Columns subtotal position": [""],
+      "Position of column level subtotal": [""],
+      "Apply conditional color formatting to metrics": [""],
+      "Used to summarize a set of data by grouping together multiple statistics along two axes. Examples: Sales numbers by region and month, tasks by status and assignee, active users by age and location. Not the most visually stunning visualization, but highly informative and versatile.": [
+        ""
+      ],
+      "Unknown input format": [""],
+      "search.num_records": [""],
+      "page_size.show": [""],
+      "page_size.entries": [""],
+      "Totals": [""],
+      "page_size.all": [""],
+      "Group By, Metrics or Percentage Metrics must have a value": [""],
+      "Metrics for which percentage of total are to be displayed. Calculated from only data within the row limit.": [
+        ""
+      ],
+      "Order results by selected columns": [""],
+      "Server pagination": [""],
+      "Enable server side pagination of results (experimental feature)": [""],
+      "Server Page Length": [""],
+      "Rows per page, 0 means no pagination": [""],
+      "Whether to include the time granularity as defined in the time section": [
+        ""
+      ],
+      "Show total aggregations of selected metrics. Note that row limit does not apply to the result.": [
+        ""
+      ],
+      "Page length": [""],
+      "Whether to align background charts with both positive and negative values at 0": [
+        ""
+      ],
+      "Further customize how to display each column": [""],
+      "Apply conditional color formatting to numeric columns": [""],
+      "Classic row-by-column spreadsheet like view of a dataset. Use tables to showcase a view into the underlying data or to show aggregated metrics.": [
+        ""
+      ],
+      "Word Cloud": [""],
+      "Minimum Font Size": [""],
+      "Font size for the smallest value in the list": [""],
+      "Maximum Font Size": [""],
+      "Font size for the biggest value in the list": [""],
+      "Rotation to apply to words in the cloud": [""],
+      "Visualizes the words in a column that appear the most often. Bigger font corresponds to higher frequency.": [
+        ""
+      ],
       "Add item": ["Ajouter un item"],
       "The query couldn't be loaded": ["La requête ne peut pas être chargée"],
       "Your query has been scheduled. To see details of your query, navigate to Saved queries": [
@@ -1706,6 +2640,7 @@
       ],
       "Unknown error": ["Erreur inconnue"],
       "Query was stopped.": ["La requête a été arrêtée."],
+      "Failed at stopping query. %s": [""],
       "Unable to migrate table schema state to backend. Superset will retry later. Please contact your administrator if this problem persists.": [
         "Impossible de migrer l'état du schéma de la table dans le backend. Superset réessayera plus tard. Veuillez contacter votre administrateur si le problème persiste."
       ],
@@ -1746,10 +2681,10 @@
       "An error occurred while setting the tab title. Please contact your administrator.": [
         "Une erreur s'est produite durant l'initialisation du titre de l'onglet. Veuillez contacter votre administrateur."
       ],
-      "Your query was saved": ["Votre requête a été enregistrée"],
       "Your query could not be saved": [
         "Votre requête n'a pas pu être enregistrée"
       ],
+      "Your query was saved": ["Votre requête a été enregistrée"],
       "Your query was updated": ["Votre requête a été mise à jour"],
       "Your query could not be updated": [
         "Votre requête n'a pas pu être mise à jour"
@@ -1785,8 +2720,8 @@
       "An error occurred while fetching function names.": [
         "Une erreur s'est produite lors de la récupération des noms des fonctions."
       ],
-      "SQL Lab uses your browser's local storage to store queries and results.\n Currently, you are using ${currentUsage.toFixed(\n            2,\n          )} KB out of ${LOCALSTORAGE_MAX_USAGE_KB} KB. storage space.\n To keep SQL Lab from crashing, please delete some query tabs.\n You can re-access these queries by using the Save feature before you delete the tab. Note that you will need to close other SQL Lab windows before you do this.": [
-        "SQL Lab utilise le loca storage de votre navigateur pour stocker les réquêtes et les résultats.\nActuellement, vous utilisez ${currentUsage.toFixed(n            2,\n          )} Ko sur ${LOCALSTORAGE_MAX_USAGE_KB} Ko. d'espace de stockage.\nPour éviter SQL Lab de planter, veuillez supprimer des onglets de requête.\nVous pouvez ré-accéder à ces requêtes en utilisant la fonction Sauver avant de supprimer l'onglet. Notez qu'auparavant, vous devrez fermer les autres fenêtres SQL Lab."
+      "SQL Lab uses your browser's local storage to store queries and results.\nCurrently, you are using %(currentUsage)s KB out of %(maxStorage)d KB storage space.\nTo keep SQL Lab from crashing, please delete some query tabs.\nYou can re-access these queries by using the Save feature before you delete the tab.\nNote that you will need to close other SQL Lab windows before you do this.": [
+        ""
       ],
       "Estimate selected query cost": [
         "Estimer le coût estimé de la requête sélectionnée"
@@ -1799,26 +2734,6 @@
       "An error occurred": ["Un erreur s'est produite"],
       "Explore the result set in the data exploration view": [
         "Explorer le résultat dans la vue d'exploration des données"
-      ],
-      "This query took %s seconds to run, ": [
-        "Cette requête s'est exécutée en %s secondes, "
-      ],
-      "and the explore view times out at %s seconds ": [
-        "et la vue d'exploration expire à %s secondes "
-      ],
-      "following this flow will most likely lead to your query timing out. ": [
-        "suivre ce flux va très probablement conduire la requête à un timeout. "
-      ],
-      "We recommend your summarize your data further before following that flow. ": [
-        "Nous recommandons d'agréger vos données avant de suivre ce flux. "
-      ],
-      "If activated you can use the ": ["Si activé, vous pouvez utiliser la "],
-      "feature to store a summarized data set that you can then explore.": [
-        "fonction pour stocker un jeu de données agrégé que vous pourrez alors explorer."
-      ],
-      "Column name(s) ": ["Nom(s) de colonne "],
-      "cannot be used as a column name. The column name/alias \"__timestamp\"\n          is reserved for the main temporal expression, and column aliases ending with\n          double underscores followed by a numeric value (e.g. \"my_col__1\") are reserved\n          for deduplicating duplicate column names. Please use aliases to rename the\n          invalid column names.": [
-        "ne peut pas être utilisé comme nom de colonne. Le nom/alias de la colonne \"__timestamp\"\n          est réservé pour l'expression temporelle principale, et les alias  de colonnes terminant\n          par des doubles underscores suivis d'une valeur numérique (ex: \"colonne__1\") sont réservés\n          pour dédupliquer les noms de colonnes dupliqués. Utilisez des alias pour renommer\n          les noms de colonnes invalides."
       ],
       "Source SQL": ["SQL source"],
       "Executed SQL": ["Lancer la requête SQL"],
@@ -1839,7 +2754,6 @@
       "Success": ["Succès"],
       "Failed": ["Echec"],
       "Running": ["En cours"],
-      "fetching": ["récupération"],
       "Offline": ["Hors ligne"],
       "Scheduled": ["Programmé"],
       "Unknown Status": ["Statut inconnu"],
@@ -1857,21 +2771,11 @@
       "Download to CSV": ["Télécharger en CSV"],
       "Copy to Clipboard": ["Copier vers le presse-papier"],
       "Filter results": ["Filtrer les résultats"],
-      "The number of results displayed is limited to %(rows)d by the configuration DISPLAY_MAX_ROWS. ": [
-        "Le nombre de résultats affichés est limité à %(rows)d  par la configuration DISPLAY_MAX_ROWS. "
+      "The number of results displayed is limited to %(rows)d by the configuration DISPLAY_MAX_ROWS. Please add additional limits/filters or download to csv to see more rows up to the %(limit)d limit.": [
+        ""
       ],
-      "Please add additional limits/filters or download to csv to see more rows up to ": [
-        "Ajoutez des limites/filtres supplémentaires ou télécharger en CSV pour voir plus de lignes jusqu'à "
-      ],
-      "the %(limit)d limit.": ["la limite %(limit)d."],
-      "The number of results displayed is limited to %(rows)d. ": [
-        "Le nombre de résultats affichés est limité à %(rows)d. "
-      ],
-      "Please add additional limits/filters, download to csv, or contact an admin ": [
-        "Ajoutez des limites/filtres supplémentaires, téléchargez en CSV ou contactez un admin "
-      ],
-      "to see more rows up to the %(limit)d limit.": [
-        "pour voir plus de lignes jusqu'à la limite %(limit)d."
+      "The number of results displayed is limited to %(rows)d. Please add additional limits/filters, download to csv, or contact an admin to see more rows up to the %(limit)d limit.": [
+        ""
       ],
       "The number of rows displayed is limited to %(rows)d by the query": [
         "Le nombre de lignes affichées est limité à %(rows)d par la requête"
@@ -1951,12 +2855,12 @@
       "Estimate the cost before running a query": [
         "Estimer le coût avant d'exécuter une requête"
       ],
-      "${isActive ? 'Collapse' : 'Expand'} table preview": [
-        "${isActive ? 'Collapse' : 'Expand'} prévisualisation table"
-      ],
       "Reset state": ["Réinitialiser l'état"],
       "Enter a new title for the tab": [
         "Entrée un nouveau titre pour l'onglet"
+      ],
+      "-- Note: Unless you save your query, these tabs will NOT persist if you clear your cookies or change browsers.\n\n": [
+        ""
       ],
       "Untitled Query %s": ["Requête sans titre %s"],
       "Close tab": ["Fermer l'onglet"],
@@ -1994,6 +2898,17 @@
         "Merci de sélectionner à la fois un Dataset et un type de graphique pour continuer"
       ],
       "Create new chart": ["Créer un nouveau graphique"],
+      "Drag and drop values into highlighted field(s) on the left control panel and run query": [
+        ""
+      ],
+      "Select values in highlighted field(s) on the left control panel and run query": [
+        ""
+      ],
+      "Add required control values to preview chart": [""],
+      "No results were returned for this query": [""],
+      "Make sure that the controls are configured properly and the datasource contains data for the selected time range": [
+        ""
+      ],
       "An error occurred while loading the SQL": [
         "Une erreur s'est produite durant le chargement du SQL"
       ],
@@ -2009,7 +2924,6 @@
       "Loaded from cache": ["Chargé depuis le cache"],
       "Click to force-refresh": ["Cliquer pour forcer le rafraîchissement"],
       "cached": ["mis en cache"],
-      "Certified by %s": ["Certifié par %s"],
       "Copy to clipboard": ["Copier vers le presse-papier"],
       "Copied to clipboard!": ["Copié vers le presse-papier !"],
       "Sorry, your browser does not support copying. Use Ctrl / Cmd + C!": [
@@ -2156,7 +3070,6 @@
       "Extra data to specify table metadata. Currently supports metadata of the format: `{ \"certification\": { \"certified_by\": \"Data Platform Team\", \"details\": \"This table is the source of truth.\" }, \"warning_markdown\": \"This is a warning.\" }`.": [
         "Donnée complémentaire pour spécifier une métadonnée de la table. Les métadonnéesactuellement supportées sont `{ \"certification\": { \"certified_by\": \"Data Platform Team\", \"details\": \"This table is the source of truth.\" }, \"warning_markdown\": \"This is a warning.\" }`."
       ],
-      "Advanced": ["Avancé"],
       "Cache timeout": ["Cache timeout"],
       "The duration of time in seconds before the cache is invalidated": [
         "Le nombre de secondes avant l'expiration du cache"
@@ -2166,6 +3079,12 @@
         "Nombre d'heures, négatif ou positif, pour décaler la colonne de temps. Cela peut être utilisé pour passer du temps UTC au temps local."
       ],
       "Spatial": ["Spatial"],
+      "Click the lock to make changes.": [
+        "Cliquez sur le cadenas pour apporter des modifications."
+      ],
+      "Click the lock to prevent further changes.": [
+        "Cliquez sur le cadenas pour empêcher d'autres modifications."
+      ],
       "virtual": ["virtuel"],
       "Dataset name": ["Nom du jeu de donnée"],
       "When specifying SQL, the datasource acts as a view. Superset will use this statement as a subquery while grouping and filtering on the generated parent queries.": [
@@ -2178,13 +3097,6 @@
       "The pointer to a physical table (or view). Keep in mind that the chart is associated to this Superset logical table, and this logical table points the physical table referenced here.": [
         "Pointeur vers une table physique (ou une vue). Gardez à l'esprit que le graphique est associé à cette table logique de superset et que cette table logique pointe vers la table physique décrite ici."
       ],
-      "Click the lock to make changes.": [
-        "Cliquez sur le cadenas pour apporter des modifications."
-      ],
-      "Click the lock to prevent further changes.": [
-        "Cliquez sur le cadenas pour empêcher d'autres modifications."
-      ],
-      "D3 format": ["Format D3"],
       "Warning": ["Avertissement"],
       "Optional warning about use of this metric": [
         "Avertissement optionnel à propos de l'utilisation de cette métrique"
@@ -2193,7 +3105,6 @@
       "Changing these settings will affect all charts using this dataset, including charts owned by other people.": [
         "La modification de ces paramètres affectera tous les graphiques qui utilisent ce jeu de données, y compris les graphiques qui appartiennent à d'autres personnes."
       ],
-      "Source": ["Source"],
       "Sync columns from source": ["Synchroniser les colonnes de la source"],
       "Calculated columns": ["Colonnes calculées"],
       "Settings": ["Paramètres"],
@@ -2243,7 +3154,6 @@
       "Timeout error": ["Erreur de timeout"],
       "Click to favorite/unfavorite": ["Cliquez pour favori ou non"],
       "Cell content": ["Contenu de cellule"],
-      "The import was successful": ["Importé avec succès"],
       "OVERWRITE": ["ECRASE"],
       "Overwrite": ["Ecrase"],
       "Import": ["Importe"],
@@ -2257,11 +3167,6 @@
       "Type a value": ["Renseigner une valeur"],
       "Filter": ["Filtre"],
       "Select or type a value": ["Sélectionner ou renseigner une valeur"],
-      "SQL query": ["requête SQL"],
-      "About": ["A propos"],
-      "Powered by Apache Superset": ["Propulsé par Apache Superset"],
-      "Documentation": ["Documentation"],
-      "Report a bug": ["Rapporter un BUG"],
       "OK": ["OK"],
       "Search all dashboards": ["Chercher tous les tableaux de bord"],
       "Edit Email Report": ["Modifier le rapport e-mail"],
@@ -2271,11 +3176,11 @@
       "Text embedded in email": ["Text encapsulé dans l'e-mail"],
       "Image (PNG) embedded in email": ["Image (PNG) encapsulée dans l'e-mail"],
       "Formatted CSV attached in email": ["CSV formatté attaché dans l'e-mail"],
-      "REPORT NAME ERROR": ["Erreur dans le nom du rapport"],
-      "DESCRIPTION ERROR": ["Erreur de description"],
+      "Include a description that will be sent with your report": [""],
       "Scheduled reports will be sent to your email as a PNG": [
         "Les rapports planifiés seront envoyés à votre @ e-mail en PNG"
       ],
+      "0 12 * * 1": [""],
       "Timezone": ["Fuseau horaire"],
       "Email reports active": ["Rapports par e-mail actifs"],
       "Edit email report": ["Modifier le rapport par e-mail"],
@@ -2285,6 +3190,7 @@
       ],
       "Delete Report?": ["Supprimer le rapport ?"],
       "Loading...": ["Chargement ..."],
+      "Access to user activity data is restricted": [""],
       "There was an error loading the tables": [
         "Il y a eu une erreur au chargement des tables"
       ],
@@ -2310,14 +3216,14 @@
       "There was an issue favoriting this dashboard.": [
         "Un problème est survenu lors de l'activation de ce tableau de bord."
       ],
-      "This dashboard is now ${nowPublished}": [
-        "Ce tableau de bord est maintenant ${nowPublished}"
-      ],
       "You do not have permissions to edit this dashboard.": [
         "Vous n'avez pas les droits pour modifier ce tableau de bord."
       ],
       "This dashboard was saved successfully.": [
         "Ce Tableau de Bord a été sauvegardé avec succès."
+      ],
+      "You do not have permission to edit this dashboard": [
+        "Vous n'avez pas le droit de modifier ce tableau de bord"
       ],
       "Could not fetch all saved charts": [
         "Impossible de récupérer tous les graphiques sauvegardés"
@@ -2332,9 +3238,12 @@
       "Any color palette selected here will override the colors applied to this dashboard's individual charts": [
         "Une palette de couleur sélectionnée ici écrasera les couleurs appliquées aux graphiques de ce tableau de bord"
       ],
-      "Color scheme": ["Jeu de couleur"],
       "You have unsaved changes.": [
         "Vous avez des modifications non sauvegardées."
+      ],
+      "Drag and drop components and charts to the dashboard": [""],
+      "You can create new charts or use existing ones from the panel on the right": [
+        ""
       ],
       "Ready to review filters in this dashboard?": [
         "Prêt à vérifier les filtres dans ce tableau de bord ?"
@@ -2377,10 +3286,10 @@
         "copier également les graphiques (dupliquer)"
       ],
       "Filter your charts": ["Filtrer vos graphiques"],
-      "Sort by": ["Trier par"],
       "Cross Filter Scoping": ["Portée du filtre croisé"],
       "Load a CSS template": ["Chargé un modèle CSS"],
       "Live CSS editor": ["Editeur CSS en ligne"],
+      "Go to the edit mode to configure the dashboard and add charts": [""],
       "Applied Cross Filters (%d)": ["Filtres croisés appliqués (%d)"],
       "Applied Filters (%d)": ["Filtres appliqués (%d)"],
       "Incompatible Filters (%d)": ["Filtres incompatibles (%d)"],
@@ -2411,9 +3320,7 @@
       "Download as image": ["Télécharger comme image"],
       "Exit fullscreen": ["Sortir du mode plein écran"],
       "Enter fullscreen": ["Passer en plein écran"],
-      "You do not have permission to edit this dashboard": [
-        "Vous n'avez pas le droit de modifier ce tableau de bord"
-      ],
+      "Apply": ["Appliquer"],
       "A valid color scheme is required": [
         "Un jeu de couleur valide doit être fourni"
       ],
@@ -2423,16 +3330,13 @@
         "Owners est une liste d'utilisateurs qui peuvent modifier le tableau de bord. Interrogeable par nom ou nom d'utilisateur."
       ],
       "Colors": ["Couleur"],
-      "Roles is a list which defines access to the dashboard. Granting a role access to a dashboard will bypass dataset level checks. If no roles defined then the dashboard is available to all roles.": [
-        "Roles est une liste qui défini ceux qui accède au tableau de bord .Donner un droit d'accès à un tableau de bord surpasse les contrôles de droit de niveau jeu de donnée. Si roles n'est pas défini, le tableau de bord est accessible à tous les profils."
-      ],
-      "Apply": ["Appliquer"],
       "Dashboard properties": ["Propriétés du tableau de bord"],
       "Basic information": ["Information simple"],
       "URL slug": ["URL Slug"],
       "A readable URL for your dashboard": [
         "Pour avoir une URL lisible pour votre tableau de bord"
       ],
+      "Any additional detail to show in the certification tooltip.": [""],
       "JSON metadata": ["méta-données JSON "],
       "This dashboard is not published, it will not show up in the list of dashboards. Click here to publish this dashboard.": [
         "Ce tableau de bord n'est pas publié, il ne sera pas visible dans la liste des tableaux de bord. Cliquez ici pour publier ce tableau de bord."
@@ -2456,6 +3360,7 @@
       ],
       "Cached %s": ["En cache %s"],
       "Fetched %s": ["Récupéré %s"],
+      "Query %s: %s": [""],
       "Minimize chart": ["Graphique minimisé"],
       "Maximize chart": ["Graphique maximisé"],
       "Force refresh": ["Forcer à rafraîchir"],
@@ -2490,19 +3395,15 @@
       "Row": ["Ligne"],
       "Tabs": ["Onglets"],
       "Preview": ["Prévisualisation"],
-      "Sorry, your browser does not support copying.": [
-        "Désolé, votre navigateur ne doit pas supporter la copie."
-      ],
       "Sorry, something went wrong. Try again later.": [
         "Une erreur s'est produite. Ré essayez plus tard."
       ],
-      "All Filters (${filterValues.length})": [
-        "Tous les filtres (${filterValues.length})"
-      ],
-      "Filter Sets (${filterSetFilterValues.length})": [
-        "Filtres définis (${filterSetFilterValues.length})"
-      ],
+      "No filters are currently added": [""],
+      "Click the button above to add a filter to the dashboard": [""],
+      "Filter sets (%(filterSetCount)d)": [""],
+      "Clear all": ["Effacer tout"],
       "Select parent filters": ["Selectionnee les filtres parents"],
+      "Filters out of scope (%d)": [""],
       "Check configuration": ["Vérifier la configuration"],
       "Cannot load filter": ["Impossible de charger le filtre"],
       "Editing filter set:": ["Modifier l'ensemble de filtre :"],
@@ -2522,24 +3423,25 @@
       "Filter metadata changed in dashboard. It will not be applied.": [
         "Les métadonnées du filtre ont changé dans le tableau de bord. Il ne sera pas appliqué."
       ],
-      "None": ["Aucun"],
       "Please filter set name": ["Veuillez saisir un nom d'ensemble de filtre"],
       "Create": ["Créer"],
       "Create new filter set": ["Créer un nouvel ensemble de filtre"],
       "New filter set": ["Nouvel ensemble de filtre"],
-      "Clear all": ["Effacer tout"],
+      "Please apply filter changes": [""],
+      "Filter only displays values relevant to selections made in other filters.": [
+        ""
+      ],
+      "Scope": [""],
+      "Filter type": ["Type du filtre"],
+      "All charts": ["Tous les graphiques"],
       "(Removed)": ["(Supprimé)"],
       "Undo?": ["Défaire?"],
-      "Add filter": ["Ajouter un filtre"],
-      "[untitled]": ["[Sans titre]"],
-      "Filters configuration and scoping": [
-        "Configuration et portée des filtres"
-      ],
+      "Add filters and dividers": [""],
+      "Cannot create cyclic hierarchy": [""],
       "Column select": ["Sélection d'une colonne"],
       "Select a column": ["Sélectionner une colonne"],
       "No compatible columns found": ["Aucun colonne compatible trouvée"],
       "Value is required": ["Une valeur est obligatoire"],
-      "Configuration": ["Configuration"],
       "Scoping": ["Portée"],
       "Select filter": ["Selectionner un filtre"],
       "Value": ["Valeur"],
@@ -2550,25 +3452,16 @@
       "Time column": ["Colonne de temps"],
       "Time grain": ["Granularité de Temps"],
       "Group By": ["Grouper par"],
-      "Group by": ["Grouper par"],
       "Pre-filter is required": ["Un pré-filtre est obligatoire"],
       "(deleted)": ["(effacé)"],
       "Parent filter": ["Filtre parent"],
       "Filter name": ["Nom du filtre"],
       "Name is required": ["Le nom est obligatoire"],
       "Filter Type": ["Type du filtre"],
-      "Filter type": ["Type du filtre"],
       "Datasets do not contain a temporal column": [
         "Les jeux de données ne comportent pas de colonne temporelle"
       ],
       "Dataset is required": ["Un jeu de données est obligatoire"],
-      "Filter has default value": ["Le filtre a une valeur par défaut"],
-      "Default Value": ["Valeur par défaut"],
-      "Default value is required": ["Une valeur par défaut est obligatoire"],
-      "Refresh the default values": ["Rafraichir les valeurs par défaut"],
-      "Fill all required fields to enable \"Default Value\"": [
-        "Remplissez tous les champs obligatoires pour activer \"la valeur par défaut\""
-      ],
       "Filter is hierarchical": ["Le filtre est hiérarchique"],
       "Parent filter is required": ["Un filtre parent est requis"],
       "Pre-filter available values": ["Valeurs de pre-filtre disponibles"],
@@ -2579,18 +3472,34 @@
       "Sort filter values": ["Trier les valeurs de filtre"],
       "Sort type": ["Type de tri"],
       "Sort ascending": ["Tri croissant"],
-      "Sort descending": ["Tri décroissant"],
       "Sort Metric": ["Trier les métriques"],
       "If a metric is specified, sorting will be done based on the metric value": [
         "Si une métrique est définie, le tri sera basé sur sa valeur"
       ],
       "Sort metric": ["Trier les métriques"],
+      "Single value type": [""],
+      "Maximum": [""],
+      "Filter has default value": ["Le filtre a une valeur par défaut"],
+      "Default Value": ["Valeur par défaut"],
+      "Default value is required": ["Une valeur par défaut est obligatoire"],
+      "Refresh the default values": ["Rafraichir les valeurs par défaut"],
+      "Fill all required fields to enable \"Default Value\"": [
+        "Remplissez tous les champs obligatoires pour activer \"la valeur par défaut\""
+      ],
       "You have removed this filter.": ["Vous avez supprimé ce filtre."],
       "Restore Filter": ["Restaurer le Filtre"],
-      "${mainControlItem.config?.label}": ["${mainControlItem.config?.label}"],
       "Column is required": ["Colonne requise"],
       "Populate \"Default value\" to enable this control": [
         "Remplissez \"Valeur par défaut\" pour activer ce contrôle"
+      ],
+      "Default value set automatically when \"Select first filter value by default\" is checked": [
+        ""
+      ],
+      "Default value must be set when \"Filter value is required\" is checked": [
+        ""
+      ],
+      "Default value must be set when \"Filter has default value\" is checked": [
+        ""
       ],
       "Apply to all panels": ["Appliquer à tous les panneaux"],
       "Apply to specific panels": ["Appliquer à certains panneaux"],
@@ -2599,6 +3508,9 @@
       ],
       "All panels with this column will be affected by this filter": [
         "Les panneaux avec cette colonne seront affectés par ce filtre"
+      ],
+      "This chart might be incompatible with the filter (datasets don't match)": [
+        ""
       ],
       "Keep editing": ["Garder en édition"],
       "Yes, cancel": ["Oui, annuler"],
@@ -2609,100 +3521,41 @@
       "Error loading chart datasources. Filters may not work correctly.": [
         "Erreur au chargement des source de données du graphique Les filtres peuvent mal fonctionner."
       ],
+      "Transparent": [""],
       "All filters": ["Tous les filtres"],
-      "All charts": ["Tous les graphiques"],
+      "Medium": [""],
       "Tab title": ["Onglet titre"],
-      "A reference to the [Time] configuration, taking granularity into account": [
-        "Une référence à la configuration [Time] prends la granularité en compte"
-      ],
-      "One or many columns to group by. High cardinality groupings should include a series limit to limit the number of fetched and rendered series.": [
-        "Une ou plusieurs colonnes doivent être regroupées. Les regroupements avec une cardinalité importante devraient inclure une limite de séries afin de limiter le nombre de séries récupérées et affichées."
-      ],
-      "One or many metrics to display": [
-        "Une ou plusieurs métriques à afficher"
-      ],
       "Visualization type": ["Type de visualisation"],
-      "The type of visualization to display": [
-        "Le type de visualisation à afficher"
-      ],
       "Fixed color": ["Couleur fixe"],
-      "Use this to define a static color for all circles": [
-        "Utiliser ceci pour définir une couleur statique pour tous les cercles"
-      ],
       "Right axis metric": ["Mesure de l'axe de droite"],
-      "Choose a metric for right axis": [
-        "Choisir une mesure pour l'axe de droite"
-      ],
       "Linear color scheme": ["Schéma de couleurs linéaire"],
       "Color metric": ["Métrique de couleur"],
-      "A metric to use for color": ["Une métrique à utiliser par couleur"],
       "One or many controls to pivot as columns": [
         "Un ou plusieurs contrôles à transposer en colonnes"
       ],
-      "Defines the origin where time buckets start, accepts natural dates as in `now`, `sunday` or `1970-01-01`": [
-        "Définir l'origine des intervalles de temps, accepte les dates naturelles comme dans`now`, `sunday` ou `1970-01-01`"
-      ],
-      "The time granularity for the visualization. Note that you can type and use simple natural language as in `10 seconds`, `1 day` or `56 weeks`": [
-        "La granularité temporelle pour la visualisation. Noter que vous pouvez taper etu tiliser le langage naturel comme `10 seconds`, `1 day` ou `56 weeks`"
-      ],
-      "The time column for the visualization. Note that you can define arbitrary expression that return a DATETIME column in the table. Also note that the filter below is applied against this column or expression": [
-        "La colonne temps pour la visualisation. Notez que vous pouvez définir arbitrairement l'expression que retourne la colonne DATETIME dans la table. Aussi noter que le filtre ci-dessous est appliqué à cette colonne ou expression"
-      ],
-      "The time granularity for the visualization. This applies a date transformation to alter your time column and defines a new time granularity. The options here are defined on a per database engine basis in the Superset source code.": [
-        "Le granularité de temps pour la visualisation. Ceci applique une transformation de date pour modifier votre colonne de temps et définit une nouvelle granularité d'heure. Les options ici sont définies pour chaque type de SGBD dans le code source de Superset."
-      ],
-      "No filter": ["Pas de filtre"],
-      "The time range for the visualization. All relative times, e.g. \"Last month\", \"Last 7 days\", \"now\", etc. are evaluated on the server using the server's local time (sans timezone). All tooltips and placeholder times are expressed in UTC (sans timezone). The timestamps are then evaluated by the database using the engine's local timezone. Note one can explicitly set the timezone per the ISO 8601 format if specifying either the start and/or end time.": [
-        "L'intervalle de temps pour la visualisation. Tous les temps relatifs, par exemple \"Mois dernier\", \"7 derniers jours\", \"maintenant\", etc. sont évalués sur le serveur en utilisant l'heure locale du serveur (sans fuseau horaire). Toutes les infobulles et les heures des \"placeholders\" sont exprimées en UTC (sans fuseau). Les timestamps sont alors évalués par la base données en utilisant le fuseau horaire local du serveur. Notez que l'on peut indiquer explicitement la fuseau horaire dans le format ISO 8601 quand on spécifie l'heure de début et/ou de fin."
-      ],
-      "Row limit": ["Nombre de lignes max"],
-      "Limits the number of rows that get displayed.": [
-        "Limite le nombre de lignes qui sont affichées."
-      ],
-      "Series limit": ["Nombre de séries max"],
-      "Limits the number of series that get displayed. A joined subquery (or an extra phase where subqueries are not supported) is applied to limit the number of series that get fetched and rendered. This feature is useful when grouping by high cardinality column(s) though does increase the query complexity and cost.": [
-        "Limite le nombre de séries affichées. Une sous-requête associée (ou une phase supplémentaire dans laquelle les sous-requêtes ne sont pas prises en charge) est appliquée pour limiter le nombre de séries qui sont récupérées et affichées. Cette fonctionnalité est utile lors du regroupement par colonne(s) de cardinalité(s) élevée(s) bien que cela augmente la complexité et le coût de la requête."
-      ],
-      "Metric used to define how the top series are sorted if a series or row limit is present. If undefined reverts to the first metric (where appropriate).": [
-        "Métrique utilisée pour définir comment les séries principales sont triées si une limite de série ou de ligne est définie. Si indéfini, la première métrique sera utilisée (si approprié)."
-      ],
-      "Series": ["Séries"],
-      "Defines the grouping of entities. Each series is shown as a specific color on the chart and has a legend toggle": [
-        "Définit le regroupement d'entités. Chaque série est représentée par une couleur spécifique sur le graphique et masquée/affichée en cliquant sur sa légende"
-      ],
-      "Entity": ["Entité"],
-      "This defines the element to be plotted on the chart": [
-        "Ceci définit l'élément à tracer sur le graphique"
-      ],
-      "X Axis": ["Axe X"],
-      "Metric assigned to the [X] axis": ["Métrique assignée à l'axe [X]"],
-      "Y Axis": ["Axe Y"],
-      "Metric assigned to the [Y] axis": ["Métrique assignée à l'axe [Y]"],
       "Bubble size": ["Taille de la bulle"],
-      "Y Axis Format": ["Format de l'axe Y"],
-      "When `Calculation type` is set to \"Percentage change\", the Y Axis Format is forced to `.1%`": [
-        "Lorsque `Type de calcul` vaut \"Pourcentage de changement\", le format de l'axe Y est à forcé à `.1%`"
+      "Color scheme": ["Jeu de couleur"],
+      "Use this section if you want a query that aggregates": [""],
+      "Use this section if you want to query atomic rows": [""],
+      "Keep control settings?": [""],
+      "You've changed datasets. Any controls with data (columns, metrics) that match this new dataset have been retained.": [
+        ""
       ],
-      "The color scheme for rendering chart": [
-        "Le jeu de couleur pour le rendu graphique"
-      ],
-      "description": ["description"],
-      "bolt": ["boulon"],
-      "Changing this control takes effect instantly": [
-        "La modification de ce contrôle prendra effet immédiatement"
+      "No form settings were maintained": [""],
+      "We were unable to carry over any controls when switching to this new dataset.": [
+        ""
       ],
       "Customize": ["Personnaliser"],
-      "Height": ["Hauteur"],
       "Width": ["Largeur"],
       "Copy chart URL to clipboard": [
         "Copier l'URL du graphique vers le presse-papier"
       ],
+      "Sorry, your browser does not support copying.": [
+        "Désolé, votre navigateur ne doit pas supporter la copie."
+      ],
       "Superset Chart": ["Graphique Superset"],
       "Export to .JSON format": ["Exporter au format JSON"],
       "Export to .CSV format": ["Exporter au format CSV"],
-      "Controls labeled ": ["Contrôles libellés "],
-      "Control labeled ": ["Contrôle libellé "],
-      "Open Datasource tab": ["Ouvrir l'onglet Source de données"],
       "rows": ["lignes"],
       "Limit reached": ["Limite atteinte"],
       "**Select** a dashboard OR **create** a new one": [
@@ -2719,8 +3572,7 @@
       "Select a dashboard": ["Sélectionner un tableau de bord"],
       "Copy": ["Copier"],
       "rows retrieved": ["lignes récupérées"],
-      "No data": ["Pas de données"],
-      "Sorry, An error occurred": ["Désolén une erreur s'est produite"],
+      "No samples were returned for this query": [""],
       "View samples": ["Voir exemples"],
       "Search Metrics & Columns": [
         "Chercher dans les métriques et les colonnes"
@@ -2734,21 +3586,22 @@
       "Run in SQL Lab": ["Exécuter dans SQL Lab"],
       "%s - untitled": ["%s - sans titre"],
       "Edit chart properties": ["Modifier les propriétés du graphique"],
+      "Controls labeled ": ["Contrôles libellés "],
+      "Control labeled ": ["Contrôle libellé "],
+      "Open Datasource tab": ["Ouvrir l'onglet Source de données"],
       "You do not have permission to edit this chart": [
         "Vous n'avez pas les permission pour modifier ce graphique"
       ],
       "The description can be displayed as widget headers in the dashboard view. Supports markdown.": [
         "La description peut être affichée comme des widgets d'entête dans la vue tableau de bord. Prend en charge le Markdown."
       ],
+      "Configuration": ["Configuration"],
       "Duration (in seconds) of the caching timeout for this chart. Note this defaults to the dataset's timeout if undefined.": [
         "Durée (en secondes) du timeout du cache pour ce graphique. Notez que c'est par défaut le timeout du jeu de données si indéfinie."
       ],
       "A list of users who can alter the chart. Searchable by name or username.": [
         "Une liste d'utilisateurs qui peuvent modifier le graphique. Il est possible de chercher par nom de graphique ou d'utilisateur."
       ],
-      "Min": ["Min"],
-      "Max": ["Max"],
-      "Select color scheme": ["Sélectionner un schéma de couleurs"],
       "Invalid lat/long configuration.": ["Configuration lat/long non valide."],
       "Reverse lat/long ": ["Inverser lat/long "],
       "Longitude & Latitude columns": ["Les colonnes longitude & latitude"],
@@ -2761,6 +3614,7 @@
       "Geohash": ["Geohash"],
       "textarea": ["zone de texte"],
       "in modal": ["en modal"],
+      "Sorry, An error occurred": ["Désolén une erreur s'est produite"],
       "Failed to verify select options: %s": [
         "Echec de la vérification des options de sélection : %s"
       ],
@@ -2804,15 +3658,14 @@
       "Annotation layer stroke": ["Trait de la couche d'annotations"],
       "Style": ["Style"],
       "Annotation layer opacity": ["Opacité de la couche d'annotations"],
-      "Opacity": ["Opacité"],
       "Color": ["Couleur"],
-      "Line width": ["L'épaisseur de la ligne"],
       "Layer configuration": ["Configuration de la couche"],
       "Configure the basics of your Annotation Layer.": [
         "Configurer les bases de votre couche d'annotations."
       ],
       "Mandatory": ["Obligatoire"],
       "Hide layer": ["Masquer la couche"],
+      "Whether to always show the annotation label": [""],
       "Annotation layer type": ["Type de couche d'annotations"],
       "Choose the annotation layer type": [
         "Choisir le type de couche d'annotations"
@@ -2828,6 +3681,13 @@
       "Empty collection": ["Collection vide"],
       "Add an item": ["Ajouter un élément"],
       "Remove item": ["Supprimer élément"],
+      "The color scheme is determined by the related dashboard.\n              Edit the color scheme in the dashboard properties.": [
+        ""
+      ],
+      "This color scheme is being overriden by custom label colors.\n              Check the JSON metadata in the Advanced settings": [
+        ""
+      ],
+      "Select color scheme": ["Sélectionner un schéma de couleurs"],
       "Edit formatter": ["Modifier un formateur"],
       "Add new formatter": ["Ajouter un formateur"],
       "Add new color formatter": ["Ajouter un nouveau formateur de couleur"],
@@ -2851,6 +3711,7 @@
       "More dataset related options": [
         "Plus d'options sur les jeux de données"
       ],
+      "The URL is missing the dataset_id or slice_id parameters.": [""],
       "The dataset linked to this chart may have been deleted.": [
         "Le jeu de données lié à ce graphique semble avoir été effacé."
       ],
@@ -2899,10 +3760,20 @@
       "Get the specify date for the holiday": [
         "Récupérer la date spécifiée pour le jour férié"
       ],
+      "Previous": ["Précédent"],
+      "previous calendar week": [""],
+      "previous calendar month": [""],
+      "previous calendar year": [""],
+      "Midnight": [""],
       "Saved expressions": ["Expressions sauvegardées"],
       "Saved": ["Enregistré"],
       "%s column(s)": ["%s colonne(s)"],
+      "Add calculated temporal columns to dataset in \"Edit datasource\" modal": [
+        ""
+      ],
+      "Add calculated columns to dataset in \"Edit datasource\" modal": [""],
       "Simple": ["Simple"],
+      "Mark a column as temporal in \"Edit datasource\" modal": [""],
       "Custom SQL": ["SQL personnalisé"],
       "My column": ["Ma colonne"],
       "Drop a column here or click": ["Supprimer une colonne ici ou cliquer"],
@@ -2946,6 +3817,7 @@
         "L'utilisateur doit sélectionner une valeur pour ce filtre"
       ],
       "Filter configuration": ["Configuration du filtre"],
+      "Add filter": ["Ajouter un filtre"],
       "Custom SQL ad-hoc filters are not available for the native Druid connector": [
         "Les filtres ad-hoc pour le SQL personnalisé ne sont par disponibles pour le connecteur Druid natif"
       ],
@@ -2977,6 +3849,7 @@
       "Select saved metrics": ["Sélectionner les métriques sauvegardées"],
       "%s saved metric(s)": ["%s métrique(s) sauvegardée(s)"],
       "Saved metric": ["Métrique sauvegardée"],
+      "Add metrics to dataset in \"Edit datasource\" modal": [""],
       "Simple ad-hoc metrics are not enabled for this dataset": [
         "Les métriques ad-hoc simples ne sont pas disponibles pour ce dataset"
       ],
@@ -2990,9 +3863,6 @@
       ],
       "Time series columns": ["Colonnes des séries temporelles"],
       "Other": ["Autres"],
-      "Popular": ["Populaires"],
-      "ECharts": ["EGraphiques"],
-      "Advanced-Analytics": ["Analyses avancées"],
       "Recommended tags": ["Tags recommandés"],
       "Category": ["Catégorie"],
       "Tags": ["Tags"],
@@ -3014,71 +3884,28 @@
         "Choisissez votre langage de balisage préféré"
       ],
       "Put your code here": ["Mettez votre code ici"],
-      "Query": ["Requête"],
-      "URL": ["URL"],
-      "Templated link, it's possible to include {{ metric }} or other values coming from the controls.": [
-        "Lien template, il est possible d'inclure {{ metric }} or autres valeurs provenant de ces contrôles."
-      ],
-      "Time": ["Temps"],
-      "Time related form attributes": ["Attributs de formulaire liés au temps"],
       "Chart type": ["Type de graphique"],
-      "Chart ID": ["ID Graphique"],
-      "The id of the active chart": ["L'identifiant du graphique actif"],
-      "Cache Timeout (seconds)": ["Timeout du cache (secondes)"],
-      "The number of seconds before expiring the cache": [
-        "Le nombre de secondes avant l'expiration du cache"
-      ],
       "URL parameters": ["Paramètres URL"],
       "Extra parameters for use in jinja templated queries": [
         "Paramètres supplémentaires à utiliser dans les modèles de requêtes jinja"
       ],
-      "Time range endpoints": ["Bornes de la période temporelle"],
-      "Time range endpoints (SIP-15)": [
-        "Bornes de la période temporelle (SIP-15)"
-      ],
       "Annotations and layers": ["Annotations et couches"],
-      "Whether to sort descending or ascending": [
-        "Trier par ordre décroissant ou croissant"
-      ],
-      "Contribution": ["Contribution"],
-      "Compute the contribution to the total": [
-        "Calculer la contribution au total"
-      ],
-      "Advanced analytics": ["Analyses avancées"],
-      "This section contains options that allow for advanced analytical post processing of query results": [
-        "Cette section contient les options permettant un post traitement analytique avancé des résultats de requêtes"
-      ],
-      "Rolling window": ["Fenêtre glissante"],
-      "Rolling function": ["Fonction de fenêtre glissante"],
-      "Defines a rolling window function to apply, works along with the [Periods] text box": [
-        "Définit une fonction de fenêtre glissante à appliquer, fonctionne avec le champ texte [Périodes]"
-      ],
-      "Periods": ["Périodes"],
-      "Defines the size of the rolling window function, relative to the time granularity selected": [
-        "Définit la taille de la fonction de fenêtre glissante, par rapport à la granularité temporelle sélectionnée"
-      ],
-      "Min periods": ["Périodes min"],
-      "The minimum number of rolling periods required to show a value. For instance if you do a cumulative sum on 7 days you may want your \"Min Period\" to be 7, so that all data points shown are the total of 7 periods. This will hide the \"ramp up\" taking place over the first 7 periods": [
-        "Le nombre minimum de périodes glissantes requis pour afficher une valeur. Par exemple, si vous faites un somme cumulée sur 7 jours, vous souhaitez peut être que votre \"Min Période\" soit égale à 7, de sorte que tous les points de données affichés correspondent au total des 7 périodes. Ceci cachera la \"montée en puissance\" qui aura lieu au cours des 7 périodes"
-      ],
-      "Time comparison": ["Comparaison de temps"],
-      "Time shift": ["Décalage temporel"],
-      "Overlay one or more timeseries from a relative time period. Expects relative time deltas in natural language (example:  24 hours, 7 days, 52 weeks, 365 days). Free text is supported.": [
-        "Superposer une ou plusieurs séries temporelles d'une période relative. Attend des écarts temporels relatifs en langage naturel en anglais (exemple :  24 hours, 7 days, 52 weeks, 365 days). Le texte libre est supporté."
-      ],
-      "Calculation type": ["Choisir un type de calcul"],
-      "How to display time shifts: as individual lines; as the difference between the main time series and each time shift; as the percentage change; or as the ratio between series and time shifts.": [
-        "Comment afficher des décalages temporels : comme des lignes individuelles ; comme la différence entre les séries temporelles principales et chaque décalage temporel ; comme le pourcentage de changement; ou comme le ratio entre les séries et les décalages temporels."
-      ],
       "Python functions": ["Fonctions Python"],
-      "Rule": ["Règle"],
-      "Pandas resample rule": ["Règle de ré-échantillonnage Pandas"],
-      "Method": ["Méthode"],
-      "Pandas resample method": ["Méthode de ré-échantillonnage Pandas"],
+      "My beautiful colors": [""],
       "No columns": ["Pas de colonne"],
       "%s option": ["%s option(s)"],
+      "Group By filter plugin": [""],
       "Chosen non-numeric column": ["Colonne non numérique choisie"],
+      "Use only a single value.": [""],
+      "Range filter plugin using AntD": [""],
+      " (excluded)": [""],
+      "Select first filter value by default": [""],
+      "When using this option, default value can’t be set": [""],
+      "Dynamically search all filter values": [""],
+      "Select filter plugin using AntD": [""],
+      "Custom time filter plugin": [""],
       "No time columns": ["Pas de colonne temporelle"],
+      "Time column filter plugin": [""],
       "Favorites": ["Favoris"],
       "Created content": ["Contenu créé"],
       "Recent activity": ["Activité récente"],
@@ -3100,9 +3927,6 @@
         "Désolé, une erreur s'est produite lors de la récupération des rapports de ce tableau de bord."
       ],
       "The report has been created": ["Le rapport a été créé"],
-      "An error occurred while editing this report: %s": [
-        "Une erreur s'est produite durant la modification du rapport : %s"
-      ],
       "An error occurred while editing this report.": [
         "Une erreur s'est produite durant la modification de ce rapport."
       ],
@@ -3113,6 +3937,11 @@
         "Votre rapport n'a pas pu être supprimé"
       ],
       "Deleted: %s": ["Supprimé : %s"],
+      "Image download failed, please refresh and try again.": [""],
+      "(no description, click to see stack trace)": [""],
+      "Link Copied!": ["Lien copié !"],
+      "Connection looks good!": [""],
+      "ERROR: %s": [""],
       "There was an error fetching your recent activity:": [
         "Une erreur s'est produite lors de lors de la récupération de votre activité récente :"
       ],
@@ -3122,6 +3951,8 @@
       "There was an issue deleting %s: %s": [
         "Il y a eu un problème lors de la suppression de %s: %s"
       ],
+      "Working": [""],
+      "On Grace": [""],
       "report": ["rapport"],
       "alert": ["alerte"],
       "reports": ["rapports"],
@@ -3140,11 +3971,6 @@
         "Une erreur s'est produite en récupérant les valeurs créées : %s"
       ],
       "Status": ["Status"],
-      "${AlertState.success}": ["${AlertState.success}"],
-      "${AlertState.working}": ["${AlertState.working}"],
-      "${AlertState.error}": ["${AlertState.error}"],
-      "${AlertState.noop}": ["${AlertState.noop}"],
-      "${AlertState.grace}": ["${AlertState.grace}"],
       "Alerts & reports": ["Alertes et rapports"],
       "Reports": ["Rapports"],
       "Delete %s?": ["Effacer %s ?"],
@@ -3164,17 +3990,12 @@
       "90 days": ["90 jours"],
       "Add notification method": ["Ajouter une méthode de notification"],
       "Add delivery method": ["Ajouter méthode de livraison"],
-      "Edit ${isReport ? 'Report' : 'Alert'}": [
-        "Modifier ${isReport ? 'Report' : 'Alert'}"
-      ],
-      "Add ${isReport ? 'Report' : 'Alert'}": [
-        "Ajouter ${isReport ? 'Report' : 'Alert'}"
-      ],
       "Report name": ["Nom du rapport"],
       "Alert name": ["Nom de l'alerte"],
       "Alert condition": ["Condition d'alerte"],
       "Trigger Alert If...": ["Déclencher une alerte si ..."],
       "Condition": ["Condition"],
+      "Threshold value should be double precision number": [""],
       "Report schedule": ["Planification de rapport"],
       "Alert condition schedule": ["Planification de la condition d'alerte"],
       "Schedule settings": ["Paramètres de planification"],
@@ -3193,7 +4014,6 @@
       "Start at (UTC)": ["Début à (UTC)"],
       "Duration": ["Durée"],
       "Error message": ["Message d'erreur"],
-      "${alertResource?.type}": ["${alertResource?.type}"],
       "CRON expression": ["Expression CRON"],
       "Report sent": ["Rapport envoyé"],
       "Alert triggered, notification sent": [
@@ -3212,8 +4032,6 @@
       "Recipients are separated by \",\" or \";\"": [
         "Les destinataires sont séparés par \",\" ou \";\""
       ],
-      "${RecipientIconName.email}": ["${RecipientIconName.email}"],
-      "${RecipientIconName.slack}": ["${RecipientIconName.slack}"],
       "annotation": ["annotation"],
       "There was an issue deleting the selected annotations: %s": [
         "Il y eu un problème lors de la suppression des annotations sélectionnés : %s"
@@ -3339,6 +4157,7 @@
       "Are you sure you want to delete the selected dashboards?": [
         "Etes-vous sûr de vouloir supprimer les tableaux de bord sélectionné ?"
       ],
+      "Saved queries": ["Requêtes sauvegardées"],
       "SQL Copied!": ["SQL Copié !"],
       "The passwords for the databases below are needed in order to import them. Please note that the \"Secure Extra\" and \"Certificate\" sections of the database configuration are not present in export files, and should be added manually after the import if they are needed.": [
         "Les mots de passe pour les bases de données ci-dessous sont nécessaires pour les importer. Notez que les sections \"Securité Supplémentaire\" et \"Certificat\" de la configuration de la base de données ne sont pas présents dans les fichiers d'export et doivent être ajoutés manuellement après l'import si nécessaire."
@@ -3460,32 +4279,63 @@
         "pour plus d'information sur comment strcuturer votre URI."
       ],
       "Test connection": ["Tester la connexion"],
+      "Please complete all required fields.": [""],
+      "Could not verify the host": [""],
+      "The host is invalid. Please verify that this field is entered correctly.": [
+        ""
+      ],
+      "Please verify that port is open to connect.": [""],
+      "Invalid Port Number": [""],
+      "Incorrect Fields": [""],
+      "Please make sure all fields are filled out correctly": [""],
+      "The URL could not be identified. Please check for typos and make sure that \"Type of google sheet allowed\" selection matches the input": [
+        ""
+      ],
       "Please enter a SQLAlchemy URI to test": [
         "Veuillez entrer une URI SQLAlchemy pour tester"
       ],
       "Sorry there was an error fetching database information: %s": [
         "Désolé, une erreur s'est produite lors de la récupération des informations de cette base de données : %s"
       ],
+      "Or choose from a list of other databases we support:": [""],
       "Want to add a new database?": ["Ajouter un nouvelle base de données ?"],
+      "Any databases that allow connections via SQL Alchemy URIs can be added. ": [
+        ""
+      ],
+      "Any databases that allow connections via SQL Alchemy URIs can be added. Learn about how to connect a database driver ": [
+        ""
+      ],
+      "Back": [""],
       "Connect": ["Connecter"],
+      "Finish": ["Terminer"],
       "Edit database": ["Éditer la base de données"],
       "Connect a database": ["Connecter une base de données"],
+      "Connect this database using the dynamic form instead": [""],
       "Click this link to switch to an alternate form that exposes only the required fields needed to connect this database.": [
         "Cliquez sur ce lien pour basculer sur un autre formulaire qui ne montrera que les champs nécessaires pour se connecter à cette base de données."
       ],
-      "Finish": ["Terminer"],
+      "Select databases require additional fields to be completed in the Advanced tab to successfully connect the database. Learn what requirements your databases has ": [
+        ""
+      ],
+      "Connect this database with a SQLAlchemy URI string instead": [""],
       "Click this link to switch to an alternate form that allows you to input the SQLAlchemy URL for this database manually.": [
         "Cliquez sur ce lien pour basculer sur un autre formulaire qui vous permettra d'entrer manuellement l'URL SQLAlchemy pour cette base de données."
       ],
       "This can be either an IP address (e.g. 127.0.0.1) or a domain name (e.g. mydatabase.com).": [
         "Cela peut être soit une adresse IP (ex 127.0.0.1)  ou un nom de domaine (ex mydatabase.com)."
       ],
+      "e.g. 127.0.0.1": [""],
+      "Host": [""],
+      "e.g. 5432": [""],
+      "e.g. world_population": [""],
       "Copy the name of the  database you are trying to connect to.": [
         "Copier le nom de la base de données à laquelle vous essayez de vous connecter."
       ],
+      "e.g. ********": [""],
       "Pick a nickname for this database to display as in Superset.": [
         "Choisissez un alias pour l'affichage de cette base de données dans Superset."
       ],
+      "e.g. param1=value1&param2=value2": [""],
       "Add additional custom parameters": [
         "Ajouter des paramètres personnalisés supplémentaires"
       ],
@@ -3569,7 +4419,6 @@
       "Duration: %s": ["Durée : %s"],
       "Tab name": ["Nom de l'onglet"],
       "TABLES": ["TABLES"],
-      "Rows": ["Lignes"],
       "Open query in SQL Lab": ["Ouvrir requête dans SQL Lab"],
       "An error occurred while fetching database values: %s": [
         "Une erreur s'est produite durant la récupération des valeurs de la base de données : %s"
@@ -3579,7 +4428,6 @@
       ],
       "Search by query text": ["Texte de recherche"],
       "Query preview": ["Prévisualisation de la requête"],
-      "Previous": ["Précédent"],
       "Next": ["Suivant"],
       "Open in SQL Lab": ["Ouvrir dans SQL Lab"],
       "User query": ["Requête utilisateur"],
@@ -3590,12 +4438,10 @@
       "You are importing one or more saved queries that already exist. Overwriting might cause you to lose some of your work. Are you sure you want to overwrite?": [
         "Vous importez une ou plusieurs requêtes sauvegardées qui existent déjà. L'écrasement peut vous conduire à perdre une partie de votre travail. Etes-vous sûr de vouloir ce remplacement ?"
       ],
-      "Saved queries": ["Requêtes sauvegardées"],
       "There was an issue previewing the selected query %s": [
         "Il y a eu un problème lors de la prévisualisation de la requête sélectionnée %s"
       ],
       "Import queries": ["Importer des requêtes"],
-      "Link Copied!": ["Lien copié !"],
       "There was an issue deleting the selected queries: %s": [
         "Il y a eu un problème lors de la suppression de requêtes sélectionnées : %s"
       ],
@@ -3618,26 +4464,24 @@
       "Created": ["Créé le"],
       "Viewed": ["Consultés"],
       "Mine": ["Personnel"],
+      "View All »": [""],
+      "No %(tableName)s yet": [""],
       "Recently viewed charts, dashboards, and saved queries will appear here": [
         "Les graphiques, tableaux de bord et requêtes sauvegardées qui ont été récemment consultés apparaîtront ici"
       ],
       "Recently created charts, dashboards, and saved queries will appear here": [
         "Les graphiques, tableaux de bord et requêtes sauvegardées qui ont été récemment créés apparaîtront ici"
       ],
-      "Example ${tableName.toLowerCase()} will appear here": [
-        "Les ${tableName.toLowerCase()} d'exemple apparaîtront ici"
-      ],
       "Recently edited charts, dashboards, and saved queries will appear here": [
         "Les graphiques, tableaux de bord et requêtes sauvegardées qui ont été récemment modifiés apparaîtront ici"
       ],
+      "SQL query": ["requête SQL"],
       "${tableName\n                      .split('')\n                      .slice(0, tableName.length - 1)\n                      .join('')}\n                    ": [
         "${tableName\n                      .split('')\n                      .slice(0, tableName.length - 1)\n                      .join('')}\n                    "
       ],
       "You don't have any favorites yet!": [
         "Vous n'avez pas encore de favoris !"
       ],
-      "SQL Lab queries": ["Vue SQL Lab"],
-      "${tableName}": ["${tableName}"],
       "query": ["requête"],
       "Share": ["Partage de requête"],
       "Ran %s": ["A exécuté %s"],
@@ -3654,6 +4498,13 @@
         "Une erreur s'est produite lors de la récupération de vos requêtes sauvegardées : %s"
       ],
       "Recents": ["Récents"],
+      "Upload a CSV": ["Téléverser un fichier CSV"],
+      "Upload a Columnar File": ["Téléverser un fichier en colonnes"],
+      "Upload Excel": ["Téléverser un fichier Excel"],
+      "About": ["A propos"],
+      "Powered by Apache Superset": ["Propulsé par Apache Superset"],
+      "Documentation": ["Documentation"],
+      "Report a bug": ["Rapporter un BUG"],
       "Select start and end date": [
         "Selectionner la date de début et la date de fin"
       ],
@@ -3707,17 +4558,16 @@
       "These filters apply to the values available in the dropdowns": [
         "Ces filtres s'appliquent aux valeurs disponibles dans les listes déroulantes"
       ],
+      "URL": ["URL"],
+      "Templated link, it's possible to include {{ metric }} or other values coming from the controls.": [
+        "Lien template, il est possible d'inclure {{ metric }} or autres valeurs provenant de ces contrôles."
+      ],
       "Time-series Table": ["Table de Séries temporelles"],
       "Compare multiple time series charts (as sparklines) and related metrics quickly.": [
         "Comparer rapidement des graphiques de multiple séries temporelles et leurs métriques."
       ],
-      "Multi-Variables": ["Multi-Variables"],
-      "Comparison": ["Comparaison"],
-      "Legacy": ["Legacy"],
-      "Percentages": ["Pourcentages"],
-      "Tabular": ["Tabulaire"],
       "Text": ["Zone de texte"],
-      "Trend": ["Tendance"]
+      "We have the following keys: %s": [""]
     }
   }
 }
